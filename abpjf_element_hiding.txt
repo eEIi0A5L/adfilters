@@ -2,9 +2,9 @@
 ! Homepage: https://github.com/k2jp/abp-japanese-filters/
 ! Title: ABP Japanese Element-hiding filters (ONLY FOR Japanese and experienced users: READ Support Policy)
 ! Expires: 6 hours
-! Version: 201903031956
+! Version: 201907122334
 !
-! Last modified: 2019-03-03 19:56 JST(UTC+0900)
+! Last modified: 2019-07-12 23:34 JST(UTC+0900)
 ! Change log: https://github.com/k2jp/abp-japanese-filters/wiki/FilterChangeLog
 ! Code license: GNU GPL v3: http://www.gnu.org/licenses/gpl.html
 ! Content license: Creative Commons BY-NC-SA 4.0 http://creativecommons.org/licenses/by-nc-sa/4.0/
@@ -540,6 +540,7 @@
 ##a[href*=".cpalead.com"]
 ##a[href*=".csolution.jp/"][href*="//cm-"]
 ##a[href*=".cuenote.jp/"]
+##a[href*="//d.pr/"]
 ##a[href*="digiket.com/work/show/_data/ID="][href*="/AFID="]
 ##a[href*="//djdmms.net/"]
 ##a[href*="dlsite.com/dlaf/=/link/"]
@@ -582,6 +583,7 @@
 ##a[href*="//cl.jlisting.jp"]
 ##a[href*="//36.jpn.org/"]
 ##a[href*="//on.jpn.org/"]
+##a[href*="//jpnhighlow-as.life/"]
 ##a[href*="//search.jword.jp"]
 ##a[href*="//kvors.com/click/?"]
 ##a[href*="//lahw.info/"]
@@ -616,6 +618,7 @@
 ##a[href*=".afl.rakuten.co.jp/hsc/"]
 ##a[href*="//rd.rakuten.co.jp/c/?"]
 ! ##a[href*="//rd.rakuten.co.jp/s/?"]
+~rapidgator.net##a[href*="//rapidgator.net/article/premium/"]
 ~rikunabi.com##a[href*=".rikunabi.com/"][href*=";vos="]
 ~rikunabi.com##a[href*=".rikunabi.com/"][href*="?vos="]
 ##a[href*="rssad.jp/trendmatch/"]
