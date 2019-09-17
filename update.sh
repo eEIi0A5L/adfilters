@@ -9,7 +9,8 @@ wget -N https://raw.githubusercontent.com/k2jp/abp-japanese-filters/master/abpjf
 #wget -N http://tofukko.r.ribbon.to/Adblock_Plus_list.txt
 #wget -N http://tofukko.r.ribbon.to/Adblock_Plus_list_sjis.txt
 wget -N https://raw.githubusercontent.com/tofukko/filter/master/Adblock_Plus_list.txt
-wget -N http://www.malwaredomainlist.com/hostslist/hosts.txt
+#wget -N http://www.malwaredomainlist.com/hostslist/hosts.txt
+wget -N https://www.malwaredomainlist.com/hostslist/hosts.txt
 wget -N https://hosts-file.net/ad_servers.txt
 wget -N https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt
 
