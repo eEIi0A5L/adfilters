@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 11:25 2019/09/14
+! 最終更新 11:25 2019/09/19
 !
 !--------通販サイト--------!
 	!amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net|~outlook.live.com
@@ -711,8 +711,6 @@ javbuz.com##.player-ads-bottom
 javhub.net###r18_banner
 japanhub.net###r18
 
-||javfor.me/iframe-as1.html
-||javfor.me/images/r18$image
 ||javhub.net/video_ads.html
 
 ||heavy-r.com/ilove/bananas.php
@@ -799,7 +797,7 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||akibablog.net/banner-
 ||akibablog.net/right-side2.html
 ||alc.co.jp/content/js/mc.js?
-||anitube.se/player/anitubeJWOverlay/
+||anitube.cz/player/anitubeJWOverlay/
 ||antivirus-news.net/image/*_bnn*.png
 ||anyporn.com/aa/
 ||artstation.com/p/c_assets/

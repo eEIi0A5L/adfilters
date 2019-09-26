@@ -2,9 +2,18 @@
 ! Title: 280blocker for japanese mobile site
 ! Homepage: https://280blocker.net
 ! Licence: CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/)
-! Last updated: 2019-09-09
-##.blocker280-20190909
+! Last updated: 2019-09-23
+##.blocker280-20190923
 
+!2019/09/23
+##.widget-gpdr-banner
+##.nativead_widget
+###gdpr_area
+###fluct-pc-sticky-ad
+japan.cnet.com##ul#social_bkm_wrap_top
+oreno-erohon.com##div.picad2row
+||girlssquare.net/img/banner/
+||alxc.addlv.smt.docomo.ne.jp^
 
 !2019/09/09
 food-stadium.com##div.banner

@@ -1,8 +1,8 @@
-! Checksum: +8IkV/7LydU7EexLJsPRDQ
+! Checksum: BTZPVebgl2266W7UKRJGug
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.2.25
-! TimeUpdated: 2019-09-14T01:30:55+03:00
+! Version: 2.0.2.29
+! TimeUpdated: 2019-09-25T13:31:03+03:00
 ! Expires: 2 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#japanese
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
@@ -502,6 +502,7 @@ mindhack2ch.com#?#.article-body > .ad:has(> .adsbygoogle)
 mindhack2ch.com#?#.article-body > .rss:has(> script)
 mindhack2ch.com#?#.article-post-bottom > .rss-article:has(> .rss-article-item)
 !
+ascii2d.net#?#.col-lg-4 > .p-t-1:has(> h5:contains(広告))
 nijinchu.com#?#article > div.entry_content > h3:contains(おすすめ商品)
 melos.media#?#.x1_article > .x1_articleArea[-ext-has='div.x1_siteTitle:contains([PR])']
 repeat-drama.info#?#.side_inner > .box:contains(スポンサーリンク)
@@ -700,6 +701,8 @@ _ds_adtag_
 ! Section contains rules for specific websites
 !
 ! /banner/banner_ - if it is necessary, make this rule domain specific
+epochtimes.jp##.margin-Ad-B20
+ascii2d.net##.amazon
 audioreview.m1001.coreserver.jp###side-fixed > #custom_html-23
 audioreview.m1001.coreserver.jp###list > .posts-list-upper-widget
 audioreview.m1001.coreserver.jp###side-fixed a[href^="//af.moshimo.com/af/c/click?"]
@@ -711,6 +714,7 @@ yomiuri.co.jp###yolyp_popup
 nijinchu.com##div[class*="adv"]
 ||cdn.exaf.jp/dmm/js^$domain=nijinchu.com
 vipsister23.com###share2
+.gif$third-party,domain=av.movie
 av.movie##div[class*="-banner"]
 av.movie##[class$="-ads"]
 av.movie##a[href^="https://theporndude.com/"]
@@ -763,7 +767,6 @@ mindhack2ch.com##.ad
 ||mv-mindhack2ch.up.seesaa.net/common/image_feed.js
 localplace.jp###bannerList
 karapaia.com##.ads
-hoikuen-ranking.com##.banner
 oricon.co.jp##aside.top-inline-banner
 oricon.co.jp##aside.block-header-banner
 erogazo-ngo.com##p > a[rel="nofollow"]
@@ -985,7 +988,7 @@ noaboutsnote.hatenablog.com##.hatena-asin-detail
 ogeji.hatenablog.com##.entry-content > .code ~ table[style*="width:300px"]
 cyg-server.playing.wiki,seesaawiki.jp###seesaa-bnr
 wiki.seesaa.jp##.ad-boomapp
-jp.msn.com,dengekionline.com,wiki.seesaa.jp##.banner
+ascii2d.net,hoikuen-ranking.com,jp.msn.com,dengekionline.com,wiki.seesaa.jp##.banner
 ejje.weblio.jp###learning-level-table-wrap > #leadBtnWrp
 ejje.weblio.jp##body > #contentWrp ~ #outerSideLeft
 ejje.weblio.jp##.free-reg-banner
@@ -1349,6 +1352,8 @@ avgle.com##body > div[style*="z-index"]:not([id]):not([class])
 !
 ! White list. Fixing filtration errors(false-positive)
 !
+! https://github.com/AdguardTeam/AdguardFilters/issues/39988
+@@||jp.popin.cc/popin_discovery/$domain=livedoor.com
 ! https://github.com/AdguardTeam/AdguardFilters/issues/39382
 @@||s.yimg.jp/bdv/yahoo/darla/*/js/darla-secure-*.js$domain=mail.yahoo.co.jp
 ! https://github.com/AdguardTeam/AdguardFilters/issues/28607
