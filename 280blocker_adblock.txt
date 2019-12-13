@@ -2,8 +2,93 @@
 ! Title: 280blocker for japanese mobile site
 ! Homepage: https://280blocker.net
 ! Licence: CC BY-NC-ND 4.0 (https://creativecommons.org/licenses/by-nc-nd/4.0/)
-! Last updated: 2019-10-17
-##.blocker280-20191017
+! Last updated: 2019-12-12
+##.blocker280-20191212
+
+!2019/12/12
+||api.kaiu-marketing.com^
+||h1g.jp/image/ad/
+hosyusokuhou.jp###ovrss
+fudousan-kyokasho.com###my_banner-121
+arukikata.co.jp###bottom_banners
+cyzowoman.com###onesignal-popover-container
+s.famitsu.com##.l-banner
+writening.net##.section-ad
+jin115.com##.footer_social_ad
+##.fixed-bnr
+
+!2019/11/29
+fgomatomeplus.com##div#layer_board_area
+geekjob.jp##.sp_camp_banner
+eigo.plus###widget-fixed-footer
+bbc.com##.share-tools--no-event-tag
+kashi-mo.com##.hikaku
+kashi-mo.com##.carrier_table
+kashi-mo.com##.rectangle_bnr
+games.yahoo.co.jp##.promoVideo_banner
+games.yahoo.co.jp##.promoVideo
+times.abema.tv##.button-share
+vippers.jp##.include2
+girlsreport.net##.self_ad
+search.yahoo.co.jp##.AD__SSList
+hokkaido-np.co.jp###bdash-reception
+kashi-kari.jp##.amp-wp-886b54e
+anond.hatelabo.jp##div#ad-overlay-bottom-sp-1
+
+##a[onclick*="twitter.com/intent/tweet"]
+
+
+!||static.karte.io/libs/tracker.js
+
+
+!||nakanohito.jp^$domain=~enjoytokyo.jp,~iphone-mania.jp
+||nakanohito.jp^$domain=~enjoytokyo.jp,~iphone-mania.jp,~itmedia.co.jp
+
+||ads.nicovideo.jp
+
+
+##a[href*="hb.afl.rakuten.co.jp/hgc/"] img
+##a[href*="hb.afl.rakuten.co.jp/hsc/"] img
+
+
+
+!2019/11/07
+||statsforads.com^
+||reajyu.net^
+||ask.fm/ads/
+
+##a[href^="https://reajyu.net/"]
+##a[href*=".cir.io/"]
+###overlay_microad
+
+best-legal.jp##a[href^="https://m02.preventsi.co.jp"]
+vippers.jp##a[href^="https://endia.net/"]
+sinoalice-matome.com##.layer_board_bg
+sinoalice-matome.com##.layer_board
+
+!||fancrew.jp^$third-party
+
+!2019/10/27
+xn--zcka9bza7pybd5118hco4a.com##.execphpwidget
+matome-plus.com##.amazontotalboxtest
+tsutaya.tsite.jp##.c_spadd
+fm-p.jp###body_headad_prime
+web.smartnews.com###footer
+will-mari.com###ads
+2ch-n.net##.adnetwork
+||steepto.com^
+||io.narrative.io^
+||pippio.com^
+||deloplen.com^
+||infolinks.com^
+||torimochi-ad.net^
+||propellerclick.com^
+||viglink.com/images/pixel.gif
+||img.pointtown.com/image/page/friendship/banner/
+||hostlove.com/cmbook/
+
+!hostlove.com##.ads
+
 
 !2019/10/17
 syachi9.black###nav-follow
@@ -237,8 +322,6 @@ taking-a-stand.jp##.cta-wrap
 amebaownd.com##.owndbar--app
 amebaownd.com##.owndbar
 
-!||nakanohito.jp^$domain=~enjoytokyo.jp
-||nakanohito.jp^$domain=~enjoytokyo.jp,~iphone-mania.jp
 
 !||pardot.com
 !||pardot.com^$third-party
@@ -1387,8 +1470,9 @@ youflix.is###dmm_box
 webcg.net###add-to-home
 hakkoudo.com##.cmp_bannerbox
 
-##a[href*="hb.afl.rakuten.co.jp/hgc/"]
 ~dmm.com,~dmm.co.jp##a[href*="//dmm.to/"][href*="come="]
+
+
 
 ||ppc-direct.com
 ||exosrv.com$domain=~avgle.com
@@ -1466,7 +1550,7 @@ yourmystar.jp###wrap-search-banner
 ~google.com,~google.co.jp,~yahoo.co.jp,~bing.com,~2an.jp##a[href*="//2an.jp/"]
 
 
-~makinokougen.co.jp,~kyusho.co.jp,~base-power.co.jp,~nexco-hoken.co.jp,~minilite.co.jp,~fukuokayuho.net,~sourcenext.com,~jreu-h.jp,~chance.com,~cero.gr.jp,~sonoseika.jp,~benesse.ne.jp,~isewanferry.co.jp,~mishimashakyo.jp,~p-gabu.jp,~toho-chozai.co.jp,~ochikensetsu.co.jp,~nikkei.com,~surveyenquete.net,~eiyou-hyogo.or.jp,~tsite.jp,~sugutama.jp,~mofa.go.jp,~houdoukyoku.jp,~ec-bought.com##[class^="ad-"]:not(body):not(#ad-preview)
+~.narushimajk.co.jp,~makinokougen.co.jp,~kyusho.co.jp,~base-power.co.jp,~nexco-hoken.co.jp,~minilite.co.jp,~fukuokayuho.net,~sourcenext.com,~jreu-h.jp,~chance.com,~cero.gr.jp,~sonoseika.jp,~benesse.ne.jp,~isewanferry.co.jp,~mishimashakyo.jp,~p-gabu.jp,~toho-chozai.co.jp,~ochikensetsu.co.jp,~nikkei.com,~surveyenquete.net,~eiyou-hyogo.or.jp,~tsite.jp,~sugutama.jp,~mofa.go.jp,~houdoukyoku.jp,~ec-bought.com##[class^="ad-"]:not(body):not(#ad-preview)
 ~tantora.jp,~cero.gr.jp,~benesse.ne.jp,~ma-bank.net,~dechaugirls.jp,~repeat-drama.info,~video.fc2.com,~sugutama.jp,~linguee.jp,~kyoto-np.co.jp,~doujin-free.com,~mydocomo.com,~smt.docomo.ne.jp,~newsweekjapan.jp,~ec-bought.com,~ferrarilamborghininews.com##[class^="ad_"]:not(body)
 ~medical-okay.com,~minsitu.net,~health-karada.com,~adguard.com,~surveyenquete.net,~ec-bought.com##[id*="-ads-"]:not(body):not(header)
 ~startpage.com,~gadgetdamage.blog.fc2.com,~bbc.co.uk,~bbc.com##[class*="-ads-"]:not(body):not(header)
@@ -1475,7 +1559,7 @@ yourmystar.jp###wrap-search-banner
 
 ~kakomonn.com,~jp-horse-breaking.blogspot.com,~mirm.jp,~gadgetdamage.blog.fc2.com,~alicex.jp,~server-setting.info,~server-domain.info,~monst.today,~publicdomainq.net,~8wayrun.com,~battlecats-db.com,~9ketsuki.info,~nazolog.com,~z0i.net,~ff14angler.com,~db-siken.com,~pm-siken.com,~sg-siken.com,~sc-siken.com,~nw-siken.com,~mushinavi.com,~k05.biz,~itpassportsiken.com,~fe-siken.com,~douga-getter.com,~ap-siken.com,~off-soft.net,~earthyworld.com,~coron.tech##.adsbygoogle:not(body)
 
-~find-method.com,~accounts.yahoo.co.jp,~gadgetdamage.blog.fc2.com,~thisav.com,~savevideo.me,~pixiv.net,~gmail.com,~mail.google.com,~inbox.google.com##.ads:not(body)
+~book.hostlove.com,~find-method.com,~accounts.yahoo.co.jp,~gadgetdamage.blog.fc2.com,~thisav.com,~savevideo.me,~pixiv.net,~gmail.com,~mail.google.com,~inbox.google.com##.ads:not(body)
 ~gadgetdamage.blog.fc2.com,~go.jp,~lg.jp,~db-siken.com,~pm-siken.com,~sg-siken.com,~sc-siken.com,~nw-siken.com,~itpassportsiken.com,~fe-siken.com,~ap-siken.com,~nazolog.com,~mobagate.net,~mushinavi.com,~impress.co.jp,~houdoukyoku.jp,~1000mg.jp,~mapion.co.jp,~gmail.com,~doujin-free.com,~mydocomo.com,~smt.docomo.ne.jp,~inbox.google.com,~mail.google.com,~www.afpbb.com##.ad:not(body):not(nav)
 !~surveyenquete.net,~doujin-free.com,~douga-getter.com,~jami2010.com,~gtoys.blog48.fc2.com,~monara.net,~mydocomo.com,~smt.docomo.ne.jp,~gmail.com,~ec-bought.com,~ferrarilamborghininews.com,~sorasi.net,~akb48gnittimatome.com,~gametter.com,~halchim.jp,~jinseinokiduki.com,~kamikiyuki.hatenablog.com,~kyukyoku-matome.com,~mukulog.com,~omutulove.blog.fc2.com,~repeat-drama.info,~shindan-apps.net,~wakudan.seesaa.net,~www.anime-drama.com,~www.footballnews.jp,~eikaiwamastery.blogspot.jp,~nasubiblog.com,~kashinoen.com###adsense
 
@@ -1856,7 +1940,6 @@ monnsutogatya.com##.veryfront
 ||j.image-ad.jp
 ||adservice.google.com
 ||pagead-googlehosted.l.google.com
-||static.karte.io/libs/tracker.js
 ||graph.facebook.com/network_ads
 
 yahoo.co.jp###richlabo
@@ -3247,7 +3330,6 @@ BannerLoader$domain=wikipedia.org
 ||exoclick.com^
 ||eyeota.net^
 ||fam-ad.com^
-||fancrew.jp^$third-party
 ||fivecdm.com^
 ||fluct.jp^
 ||focas.jp^
@@ -3598,7 +3680,7 @@ BannerLoader$domain=wikipedia.org
 ##a[href*="click.dsiads.mopo.jp"]
 ##a[href*="click.dtiserv2.com"]
 ##a[href*="click.duga.jp"]
-##a[href*="click.j-a-net.jp"]
+##a[href*="click.j-a-net.jp"] img
 
 ##a[href*="comic-promotion.com"]
 ##a[href*="cyber-ad01.cc/"]
@@ -3609,7 +3691,6 @@ BannerLoader$domain=wikipedia.org
 ##a[href*="global.msmtrakk06d.com"]
 ##a[href*="goo.gl/UpjaIq"]
 ##a[href*="h.accesstrade.net/sp"] img
-##a[href*="hb.afl.rakuten.co.jp/hsc/"]
 ##a[href*="holeinone.me"]
 ##a[href*="infotop.jp/click.php"]
 ##a[href*="innovate-blog.info"]
@@ -3936,7 +4017,6 @@ hostlove.com###s_vip1
 hostlove.com###shop_list4
 hostlove.com###top_ad_list
 hostlove.com###vip2_2
-hostlove.com##.ads
 hostlove.com##.line_ad2
 houyhnhnm.jp###pagetop
 huffpost.com##.advertisement

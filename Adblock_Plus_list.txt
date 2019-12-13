@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 18:28　2019/09/27
+! 最終更新 2019/12/08 22:10
 !
 !--------通販サイト--------!
 	!amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net|~outlook.live.com
@@ -52,10 +52,11 @@ cavelis.net##[id^="amazon_"]
 cavelis.net##.rectangle_area
 
 !2019/06/17 サイトの管理終了 閉鎖時期未定
-temp.emotionflow.com##.IllustDetailLeft > DIV:first-child
-temp.emotionflow.com##.IllustDetailRight > DIV:last-child
-temp.emotionflow.com##.ContentsWorkLeft > DIV:not(.IllustThumb)
-temp.emotionflow.com##.ContentsRight > DIV:last-child
+!2019/11/12 無効
+!temp.emotionflow.com##.IllustDetailLeft > DIV:first-child
+!temp.emotionflow.com##.IllustDetailRight > DIV:last-child
+!temp.emotionflow.com##.ContentsWorkLeft > DIV:not(.IllustThumb)
+!temp.emotionflow.com##.ContentsRight > DIV:last-child
 
 !----------------------------広告----------------------------!
 /300x250.
@@ -601,7 +602,6 @@ pornhub.com##.video-wrapper > #player + [class]
 pornhub.com##script:inject(set-constant.js, page_params.holiday_promo, true)
 pornhub.com##^script:has-text(tj_ads)
 pornhub.com##+js(addEventListener-defuser.js, DOMContentLoaded, [native code])
-*$csp=script-src 'self' * data: 'unsafe-inline' 'unsafe-eval',domain=pornhub.com
 
 !redtube
 ||redtube.com/_status/
@@ -1354,6 +1354,7 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ##.adv
 ##.advertisement
 ##.vjs-poster
+##.vjs-adblack-overlay
 !wix.com
 ###WIX_ADS
 
@@ -1473,6 +1474,8 @@ atwiki.jp##div[style="width: 160px;height:600px"]
 b9dm.com###ad4
 basso.to,nazca.co.jp##span[style="font-size:12px; line-height:120%;"]:first-child:last-child
 bing.com###b_results > [class^="b_"]:not(.b_algo):not(.b_ans):not(.b_pag):not(.b_msg)
+bing.com##.b_algo:has( > .b_caption > p:matches-css-before(content: "Ad"))
+bing.com##.b_algo:has( > .b_caption > p:matches-css-before(content: "広告"))
 biz-journal.jp###adAmazon
 buttobi.net##div[style="position: relative; z-index:255;"]
 chart.sekai-kabuka.com###aswift_0_expand
@@ -1488,7 +1491,6 @@ easter.ne.jp##div[align="center"] > table[width="700"][cellspacing="0"][cellpadd
 exploader.net###nls
 exploader.net##[href^="https://www.dmm.co.jp/"],[href^="http://www.dmm.co.jp/"]
 favolog.org###side > div:first-child
-feedly.com##.modal-overlay
 freesoft.tvbok.com###left_box3
 freesoft.tvbok.com###right_box1
 freesoft.tvbok.com##.topad
@@ -1658,13 +1660,6 @@ yu.to##style + script[language="JavaScript"] + div[align="center"]
 ||b.engadget.com^
 ||engadget.com/traffic/
 
-!--------bookwalker.jp-----------!
-||c.bookwalker.jp^*_banner/
-||c.bookwalker.jp^*/bnr_
-||c.bookwalker.jp^*/bnr-
-bookwalker.jp###bnrSec
-bookwalker.jp##.side-deals
-
 !------------dmm-------------!
 ||dmm.ad-s.org^$third-party
 ||dmm.afisapo.com^$third-party
@@ -1705,6 +1700,7 @@ $script,third-party,domain=kissanime.ru
 rapidvideo.com##^script:has-text(window)
 
 kissanime.ru###adsIfrme7
+kissanime.ru###divFloatLeft
 kissanime.ru##.clear2
 kissanime.ru##.divCloseBut
 kissanime.ru##[style="width:920px;"]
@@ -2248,7 +2244,6 @@ blog.livedoor.jp##[src="http://blog.livedoor.jp/darkm/settings/ad.js"] + SCRIPT 
 	!検索結果
 @@||ec.sofmap.tyrellsys.com^$domain=used.sofmap.com
 @@||fwmrm.net^*/AdManager.swf?
-@@||fwmrm.net/crossdomain.xml$object_subrequest
 	!多い
 @@||google.com^$generichide
 @@||google.co.jp^$generichide
@@ -2285,7 +2280,7 @@ blog.livedoor.jp##[src="http://blog.livedoor.jp/darkm/settings/ad.js"] + SCRIPT 
 	! https://www.mlb.com/rangers/schedule/
 @@||mlb.com^$generichide
 	! 動画見れない
-@@||analytics.edgekey.net/ma_library/javascript/javascript_malibrary.js$script,domain=www3.nhk.or.jp
+@@||analytics.edgekey.net^$script,domain=www3.nhk.or.jp
 @@||nhkonline.hb.omtrdc.net/settings/*-adobeorg.xml?$domain=www3.nhk.or.jp
 	!検索関係
 @@||ntv.co.jp/ad-navi/ga/$domain=ntv.co.jp
@@ -2477,7 +2472,6 @@ youtube.com#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 
 
 !-------------------anti adblock-------------------------!
-||noadblock.net^$sankakucomplex.com
 	!変なの出る
 @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=sekai-kabuka.com
 @@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=sekai-kabuka.com
@@ -2487,6 +2481,8 @@ youtube.com#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
 @@||pagead2.googlesyndication.com/pagead/$domain=9ketsuki.info|battlecats-db.com
 	!antiadblock
 @@||trafficjunky.net/delivery/js/abp/$domain=tube8.com
+	!anti adblock
+@@||yamareco.com^$generichide
 
 atwiki.jp##body > div:not(#fb-root):first-child
 	!503を返す
