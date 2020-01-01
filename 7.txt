@@ -1,9 +1,9 @@
-! Checksum: Wq8PZQwnQfnPAy255FZLNg
+! Checksum: mF7Vjnz3pXh3/t0GzIZAeg
 ! Title: AdGuard Japanese filter
 ! Description: Filter that enables ad blocking on websites in Japanese language.
-! Version: 2.0.2.48
-! TimeUpdated: 2019-12-10T20:31:32+03:00
-! Expires: 2 days (update frequency)
+! Version: 2.0.2.49
+! TimeUpdated: 2019-12-19T15:31:33+03:00
+! Expires: 4 days (update frequency)
 ! Homepage: http://adguard.com/filters.html#japanese
 ! License: http://creativecommons.org/licenses/by-sa/3.0/
 !
@@ -88,7 +88,6 @@
 ||smartads.mobile.yahoo.co.jp^
 ||rd.yahoo.co.jp^
 ||ard.yahoo.co.jp^
-||bc.geocities.yahoo.co.jp^
 ||ov.yahoo.co.jp^
 ||yeas.yahoo.co.jp^
 ||logoole.yahoo.co.jp^
