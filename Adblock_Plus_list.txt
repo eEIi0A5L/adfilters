@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 2019/12/19 20:58
+! 最終更新 2020/11/20 19:23
 !
 !--------通販サイト--------!
 	!amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net|~outlook.live.com
@@ -33,30 +33,8 @@
 ||digiket.net^$third-party,domain=~digiket.com
 ||e-nls.com^$third-party
 ||getchu.com^$third-party
-||r18.com^$third-party,domain=~japanhub.net
+||r18.com^$third-party,domain=~japanhub.net|~javhdporn.net|~javxxx.me|~t.jav4.me
 !-------ここまで-------!
-
-||d2swpuhpwp3khd.cloudfront.net^
-!share-videos.se
-!tokyomotion.net
-
-!2019/08/29 終了予定 2019年12月15日
-||yimg.jp/images/*300_60$domain=blogs.yahoo.co.jp
-||yimg.jp/images/blog/smartphone/v2/img/bnr_
-blogs.yahoo.co.jp###bottomAdBannerArea + div + div[style="width:950px;margin:0 auto 10px;"]
-blogs.yahoo.co.jp##.interestMatchWrap
-
-!2019/07/25 終了予定 2019年9月末
-cavelis.net###market_area
-cavelis.net##[id^="amazon_"]
-cavelis.net##.rectangle_area
-
-!2019/06/17 サイトの管理終了 閉鎖時期未定
-!2019/11/12 無効
-!temp.emotionflow.com##.IllustDetailLeft > DIV:first-child
-!temp.emotionflow.com##.IllustDetailRight > DIV:last-child
-!temp.emotionflow.com##.ContentsWorkLeft > DIV:not(.IllustThumb)
-!temp.emotionflow.com##.ContentsRight > DIV:last-child
 
 !----------------------------広告----------------------------!
 /300x250.
@@ -117,7 +95,7 @@ _ad.php^
 /ads.js
 !真っ白
 !広告s同画像消
-_ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
+_ads.js
 /ads?
 /ads2.
 /adsense.
@@ -148,16 +126,19 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 /images/ad/*
 /images/ad_
 /images/ads/*
-! mapion.co.jp 地図が出てこない
-/js/ad_$domain=~mapion.co.jp
+/js/ad_
 /js/ad/*
 /js/ads.
 /js/ads-
 /js/ads_
 /js.ng/site=
 /koukoku/*
+/prebid.$domain=~prebid.org
+/prebid/*
+/prebid-
+/prebid?
 /pop.js|
-/popunder.$domain=~openload.co
+/popunder.
 /www/delivery/*
 	!/afr.php?
 	!/ajs.php?
@@ -169,8 +150,9 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 	!||d.pixiv.org^
 ^zoneid=
 ^zone_id=
+
 !geniee
-/://(?:js|\d{6})\.[-.0-9a-z]+/t/\d{3}/\d{3}/a\d{7}\.js$/
+/^https?:\/\/(?:js|[0-9]{6})\.[-.0-9a-z]+\/t/[0-9]{3}\/[0-9]{3}\/a[0-9]{7}\.js$/$script,third-party
 
 !||adnico.jp^$third-party
 !||advision-adnw.jp^$third-party
@@ -183,8 +165,11 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 !||spacenine.biz^$third-party
 !||sprout-ad.com^$third-party
 
+!g
+/^https?:\/\/[0-9a-z]{10,16}\.cloudfront\.net\/\?[a-z]{3,7}\=[0-9]{4,8}$/$script,third-party
 
-/://[0-9a-z]{10,}\.com/\d{5,}(?:/|\.css)$/$third-party
+/^https?:\/\/[a-z0-9]{5,}\.[a-z]{2,6}\/[0-9a-f]{2}\/[0-9a-f]{2}\/[0-9a-f]{2}\/[0-9a-f]{32}\.js/$script,third-party
+/^https?:\/\/[a-z0-9]{5,}\.[a-z]{2,6}\/[0-9a-f]{32}\/invoke\.js$/$script,third-party
 
 .biz/ad/
 .biz/ads/
@@ -192,6 +177,7 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 .co/ads/
 .com/ad/
 .com/ads/
+.com/ads-
 .eu/ads/
 .fr/ads/
 .gs/ads/
@@ -218,21 +204,24 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 -ads.com^$third-party,domain=~cookpad.com
 !||da-ads.com^$third-party
 
+||a-affiliate.net^$third-party
 ||a8.net^$third-party
 ||aaacompany.net^$third-party
+||aaddcount.com^$third-party
 ||access-lab.com^$third-party
 ||accesstrade.net^$third-party
+||ad-cheers.com^$third-party
 ||ad-feed.com^$third-party
 ||ad-management.biz^$third-party
 ||ad-nex.com^$third-party
-||ad-v.jp/adam/$third-party
-||ad-v.jp/data/$third-party
+||ad-spire.net^$third-party
+||ad-tag.biz^$third-party
+||ad-v.jp^$third-party
 ||ad-vortex.com^$third-party
 ||adap.tv^$third-party
 ||adapf.com^$third-party
 ||adbrite.com^$third-party
 ||addeluxe.jp^$third-party
-||adimg.net^$third-party
 ||adingo.jp$third-party
 ||adjust-net.jp^$third-party
 ||adjustnetwork.com^$third-party
@@ -245,6 +234,7 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 ||adresult.jp^$third-party
 ||ads-tool.$third-party
 ||adserver.$third-party
+||adsrvr.org^$third-party
 ||adsymptotic.com$third-party
 ||adtdp.com^$third-party
 ||adtune.jp^$third-party
@@ -261,10 +251,12 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 ||af-board.com^$third-party
 ||af-market.com^$third-party
 ||af-system.net^$third-party
+||aff-adeals.com^$third-party
 ||affiliate.$third-party
 ||affiliate-$third-party
 ||affiliatecenter.jp^$third-party
 ||affiliates.$third-party
+||afi-b.com^$third-party
 ||ag-affiliate.com^$third-party
 ||agilemedia.jp^$third-party
 ||alimama.cn^$third-party
@@ -286,11 +278,12 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 ||checkm8.com^$third-party
 ||clicktx.jp^$third-party
 ||coinurl.com^$third-party
+||contents-search-windows.com^$third-party
 ||contextweb.com^$third-party
 ||criteo.com^$third-party
 ||criteo.net^$third-party
 ||cyber-traffic.net^$third-party
-||cyberwing.co.jp^$third-party
+||cybershop-affiliate.jp^$third-party
 ||d-064.com^$third-party
 ||devo.jp^$third-party
 ||dl-rms.com^$third-party
@@ -305,6 +298,7 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 ||fastclick.net^$third-party
 ||find-a.jp^$third-party
 ||fmpub.net^$third-party
+||fourmtagservices.com^$third-party
 ||fout.jp^$third-party
 ||free-video-movie.com^$third-party
 ||fun9.net^$third-party
@@ -314,6 +308,7 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 ||gl-cash.com^$third-party
 ||glam.com^$third-party
 ||glam.jp^$third-party
+||glssp.net^$third-party
 ||gmodmp.jp^$third-party
 ||googleadservices.com^$third-party
 ||iid-network.jp^$third-party
@@ -323,7 +318,6 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 ||infolinks.com^$third-party
 ||infotop.$third-party
 ||insightexpressai.com^$third-party
-||iogous.com^$third-party
 ||j-a-net.jp^$third-party
 ||jsadapi.com^$third-party
 ||juicyads.com^$third-party
@@ -340,32 +334,33 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 ||linkshare.ne.jp^$third-party
 ||liveads.jp^$third-party
 ||livepartners.com^$third-party
-||logly.co.jp^$third-party
 ||ltassrv.com^$third-party
 ||m-n-j.com^$third-party
+||ma-jin.jp^$third-party
+||macromill.com^$third-party
 ||media.net^$third-party
 ||media6degrees.com^$third-party
 ||medleyads.com^$third-party
 ||mmaaxx.com^$third-party
 ||microad.jp^$third-party
 ||microad.net^$third-party
-||macromill.com^$third-party
 ||mediagra.com^$third-party
 ||mediaplex.com^$third-party
+||moatads.com^$third-party
 ||moshimo.com^$third-party
 ||motionlink.jp^$third-party
 ||mtburn.com^$third-party
 ||mttag.com^$third-party
 ||musicgate.$third-party
 ||my-affiliate.com^$third-party
-||next-channel.com^$third-party
 ||nsk-sys.com^$third-party
+||nxcount.com^$third-party
+||octo-pus.net^$third-party
 ||octopuspop.com^$third-party
 ||og-affiliate.com^$third-party
 ||omany.tv^$third-party
 ||online-dn.com^$third-party
-||openx.$third-party
-||openxmarket.jp^$third-party
+||openx.net^$third-party
 ||orange-park.jp^$third-party
 ||overture.com^$third-party
 ||p-advg.com^$third-party
@@ -373,16 +368,19 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 ||pagoda301.com^$third-party
 ||peer39.net^$third-party
 ||pgmediaserve.com^$third-party
+||piano.io^$third-party
 ||pinpointdmp.com^$third-party
 ||pompass.net^$third-party
 ||pop6.com^$third-party
 ||ppc-direct.com^$third-party
 ||primecaster.net^$third-party
 ||proparm.jp^$third-party
+||pubmatic.com^$third-party
 ||pushance.com^$third-party
 ||quant.jp^$third-party
 ||r-ad.ne.jp^$third-party
 ||rakuword.com^$third-party
+||realvu.net^$third-party
 ||rentracks.jp^$third-party
 ||rightsnetwork.net^$third-party
 ||rossoad.com^$third-party
@@ -400,7 +398,6 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 ||sexymap.net^$third-party
 ||sfilm.com^$third-party
 ||silveregg.net^$third-party
-||speee-ad.$third-party
 ||skimlinks.com^$third-party
 ||skimresources.com^$third-party
 ||smaf.jp^$third-party
@@ -411,7 +408,6 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 ||store-mix.com^$third-party
 ||sublimestore.jp^$third-party
 ||taboola.com^$third-party
-||tacoda.net^$third-party
 ||taggyad.jp^$third-party
 ||tagtoru.tokyo^$third-party
 ||tapone.jp^$third-party
@@ -474,16 +470,14 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 ||zeppin.com^$third-party
 
 !---- gaico
-||4uvjosuc.com^$third-party
-||8ipztcc1.com^$third-party
-||aaddcount.com^$third-party
+||4dsply.com^$third-party
 ||acloudvideos.com^$third-party
 ||adcash.com^$third-party
 ||adglare.net^$third-party
 ||admedia.com^$third-party
-||adnium.com^$third-party
 ||adnetworkperformance.com^$third-party
-||adroll.com^$third-party
+||adnium.com^$third-party
+||adreactor.com^$third-party
 ||adsafeprotected.com^$third-party
 ||adsterra.com^$third-party
 ||adtechus.com^$third-party
@@ -491,21 +485,12 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 ||adtrue.com^$third-party
 ||adultcamfree.com^$third-party
 ||advarkads.com^$third-party
-||advidi.com^$third-party
 ||adxpansion.com^$third-party
-||adzerk.net^$third-party
-||agomwefq.com^$third-party
-||avfay.com^$third-party
 ||awempire.com^$third-party
 ||awemwh.com^$third-party
 ||bebi.com^$third-party
 ||bidadx.com^$third-party
-||clickfusion.net^$third-party
-||clickiocdn.com^$third-party
 ||clicksvenue.com^$third-party
-||cpmstar.com^$third-party
-||cpmterra.com^$third-party
-||crowdscience.com^$third-party
 ||deployads.com^$third-party
 ||derlatas.com^$third-party
 ||directrev.com^$third-party
@@ -516,23 +501,18 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 ||freewebfonts.org^$third-party
 ||globaltraffico.com^$third-party
 ||gwallet.com^$third-party
-||ie8eamus.com^$third-party
+||hentaigold.net^$third-party
 ||iwanttodeliver.com^$third-party
-||jlist.com^$third-party
-||jlisting.jp^$third-party
-||ladsp.com^$third-party
+||jads.co^$third-party
 ||liveadexchanger.com^$third-party
 ||m2pub.com^$third-party
 ||madadsmedia.com^$third-party
-||mgid.com^$third-party
-||nex8.net^$third-party
-||nxcount.com^$third-party
+||o333o.com^$third-party
 ||oclaserver.com^$third-party
 ||oclasrv.com^$third-party
 ||onclickads.net^$third-party
 ||popads.net^$third-party
 ||popadscdn.net^$third-party
-||popcash.net^$third-party
 ||popmyads.com^$third-party
 ||prebid.org^$third-party
 ||projectwonderful.com^$third-party
@@ -546,13 +526,11 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 ||revivestar.com^$third-party
 ||sancdn.net^$third-party
 ||seethisinaction.com^$third-party
-||sexart.com^$third-party
-||slendastic.com^$third-party
 ||speednetwork14.com^$third-party
 ||spotxchange.com^$third-party
 ||superfastcdn.com^$third-party
+||tapad.com^$third-party
 ||teads.tv^$third-party
-||toponclick.com^$third-party
 ||tororango.com^$third-party
 ||tradeadexchange.com^$third-party
 ||trafficfactory.biz^$third-party
@@ -561,16 +539,9 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 ||trw12.com^$third-party
 ||tsyndicate.com^$third-party
 ||vacaneedasap.com^$third-party
-||velocecdn.com^$third-party
-||veohclick.net^$third-party
 ||video-people.com^$third-party
 ||videoegg.com^$third-party
-||videosz.com^$third-party
-||visualwebsiteoptimizer.com^$third-party
 ||voluumtrk.com^$third-party
-||vrixon.com^$third-party
-||xpg.com.br^$third-party
-||yandex.ru^$third-party
 ||xtendmedia.com^$third-party
 ||zemanta.com^$third-party
 ||zerezas.com^$third-party
@@ -585,193 +556,48 @@ _ads.js$domain=~mlb.mlb.com|~huffingtonpost.jp
 ||popads.net^$popup
 ||r18.com$popup
 
-!-----pornhubnetwork
-
-!共通
-/ht.js?site_
-||doublepimp.com^$third-party
-||etahub.com^$third-party
-||phncdn.com/stattracker-
-###pb_block
-
-!pornhub
-||phncdn.com/www-static/js/ph-tracking.js?
-||phncdn.com/www-static/js/htmlPauseRoll/
-pornhub.com###main-container > [id] > [class]:first-child
-pornhub.com##.video-wrapper > #player + [class]
-pornhub.com##script:inject(set-constant.js, page_params.holiday_promo, true)
-pornhub.com##^script:has-text(tj_ads)
-pornhub.com##+js(addEventListener-defuser.js, DOMContentLoaded, [native code])
-
-!redtube
-||redtube.com/_status/
-redtube.com###content_container > .show_page_modals + div
-redtube.com###video_right_col
-redtube.com##^script:has-text(var rAb=)
-redtube.com##^script:has-text(tj_ads)
-
-!xtube.com
-||3gporn.biz^$third-party
-xtube.com##.col-xs-24.col-xl-8 > div:first-child
-
-!youporn.com
-youporn.com###adblock_1
-
-!tube8.com
-tube8.com##^script:has-text(adblock)
-tube8.com###catFishBanner
-
-!----porntrex network
-||fd7qz88ckd.com^
-@@||porntrex.com^$generichide
-@@||gounlimited.to/js/pop.js
-
-!-----TXXX Network
-||com^*?z=*&sub=$~third-party
-||zog.link^$third-party
-||ipornia.com/frends/
-||bulkhentai.com^*/bulkhentai2.js
-hclips.com,hotmovs.com,txxx.com,upornia.com,vjav.com#@#[class$="-ads"]:not(html):not(body)
-
-txxx.com###myElement + DIV
-txxx.com##^script:has-text(ad_sub)
-
-vjav.com###undervideo
-
-!-----SPANKWIRE
-spankwire.com#@#[class$="-ads"]:not(html):not(body)
-extremetube.com#@#[class$="-ads"]:not(html):not(body)
-
-!-----------xhamster
-|https://$subdocument,domain=xhamster.com
-||xhamster.com/cnt.php?
-||xhcdn.com/js/m.js
-
-!埋め込み動画
-||static-ec.xhcdn.com/id2/swf/*
-||xhcdn.com^*/ads_
-
-xhamster.com##.adVideo
-xhamster.com##.sponsorBottom
-xhamster.com##.avdo.fr
-xhamster.com##^script:has-text(dataPopUnder)
-
-!-----------xvideos.com
-||xvideos.com/in.php?
-!popup
-||www.xvideos.com/video$xmlhttprequest
-!download
-@@||xvideos.com/video-download/
-!コメント見る用
-@@||www.xvideos.com/video-get-comments/
-!外部プレイヤー用
-||flashservice.xvideos.com/embedframe/$xmlhttprequest
-
-xvideos.com###video-sponsor-links
-xvideos.com##.sponsor_popup
-xvideos.com##.sponsor-popup
-xvideos.com##^script:has-text(checkVideoAds)
-
-!-----------openload.co
-||cloudflare.com/cdn-cgi/nexp/$domain=openload.co
-||openload.co/assets/js/license.5.js
-
-openload.co###videooverlay
-openload.co##^script:has-text(popAdsLoaded)
-
-!-----------avgle.com
-$third-party,popup,domain=avgle.com
-||mygoodlives.com^
-||find-my-great-life.com^
-||klaudicustors.info^
-avgle.com##img[src*=".php"]
-avgle.com###player_3x2_close:style(font-size: 250% !important;)
-avgle.com##+js(abort-on-property-read.js, AaDetector)
-avgle.com##+js(abort-on-property-read.js, ExoLoader.serve)
-avgle.com##+js(nowebrtc.js)
-avgle.com##+js(set-constant.js, showBlockIf, noopFunc)
-
-
-||jqueryserve.com^$domain=spankwire.com
-
-
-||n1198adserv.xyz^
-
-jav4.me###tbl1
-javbuz.com##.player-ads-bottom
-javhub.net###r18_banner
-japanhub.net###r18
-
-||javhub.net/video_ads.html
-
-||heavy-r.com/ilove/bananas.php
-heavy-r.com###overlayVid
-heavy-r.com##.hd-ban
-
-||pornhost.com/*.php
-
-||fapdu.com/desktop_popup.
-
-
-
-
-hpjav.tv##+js(abort-on-property-read, VAST)
-vidoza.net##^script:has-text($('.pvr'))
-
-
-!------------drtuber
-||drtuber.com/player_right_ads_
-||dtprofit.com^$subdocument,domain=drtuber.com
-||dtprofit.com/redirect/
-drtuber.com,nuvid.com,proporn.com,viptube.com###puFloatDiv
-
-!------------danbooru系
-!sankaku channel
-||otaserve.net^$domain=sankakucomplex.com
-sankakucomplex.com##+js(popads-dummy.js)
-sankakucomplex.com###post-content:style(padding-top: 0px !important;)
-
-!gelbooru
-	!antiadblock
-@@||gelbooru.com/ads.js
-
 
 !----third-party
-||antena-maker.nekotool.com
-||auone-net.jp/~$image,third-party
+||150601.fc2rs.com^
+||ad999.biz^
+||af.fukuishimbun.co.jp^
 ||banners.itunes.apple.com^
 ||bbchat.tv^*/bannar/
 ||bitflyer.jp/Images/Affiliate/
 ||coincheck.com/images/affiliates/
 ||dietnavi.com/pc/banner/
+||dogma-annex.com/media/affiliate/
+||free-video-movie.com^
 ||googlesyndication.com/pagead/
 ||gunosy.com/adnet/
+||hayamimi-hobby.com/gen-rss/
+||hogei.info^
 ||idea-unlimited.com/adsimg/
 ||imagefreak*.com^
 ||imasdk.googleapis.com^$third-party
 ||javhd.com/sb/$third-party
 ||mgstage.com/afscript/
+||mgstage.com/js/mgs_Widget
 ||mkd777.net/pd/
 ||pagead2.googlesyndication.com^
 ||partner*.become.co.jp^
+||pikkur.com/bn/
 ||pos.baidu.com^
-||rdp.pro.ne.jp^$third-party
-!http://latexcapacity.com/
-||latexbizarramb.info^
+||queen-casino.info/affi/
+||realsrv.com^
+||runative-syndicate.com^
+||speee-ad.akamaized.net^
 
+||d2swpuhpwp3khd.cloudfront.net^
+!share-videos.se
+!tokyomotion.net
 
-.com^$script,third-party,domain=hitomi.la
-/kok/*$domain=movie.eroterest.net
-/link.js$domain=iqoo.me|masutabe.info
-
-
-|https://$script,third-party,domain=rapidvideo.com
-|https://$script,third-party,domain=asianclub.tv
-|https://$script,third-party,domain=jpidols.tv
-|https://$script,subdocument,third-party,domain=clipconverter.cc
-|http://$subdocument,third-party,domain=adf.ly
-|http://$script,third-party,domain=youtube-mp3.org
-||youtube-mp3.org^$subdocument,domain=youtube-mp3.org
+$script,third-party,domain=rapidvideo.com
+$script,third-party,domain=asianclub.tv
+$script,third-party,domain=javtorrent.re
+$script,subdocument,third-party,domain=clipconverter.cc
+$script,domain=1dl.re
+$subdocument,third-party,domain=adf.ly
 
 ||2ch.vet/img/ani_
 ||4chan-ads.org^
@@ -787,17 +613,11 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||akibablog.net/ad-
 ||akibablog.net/banner-
 ||akibablog.net/right-side2.html
-||alc.co.jp/content/js/mc.js?
-||anitube.cz/player/anitubeJWOverlay/
-||antivirus-news.net/image/*_bnn*.png
+||angel-bbs.com/ssi/koukoku_
 ||anyporn.com/aa/
 ||artstation.com/p/c_assets/
+||asageifuzoku.com/img*/top_
 ||asg.to/ad/
-||ashemaletube.com/ast/b/
-||ashemaletube.com/ast/www/*.min.js?url=
-||ashemaletube.com/banner-iframe/
-||atas.io^$domain=toukoucity.to
-||blog.seesaa.jp/js/banner.js
 ||blog.seesaa.jp/js/insert-ad.min.js
 ||blog.seesaa.jp/js/insert-ad-legacy.min.js
 ||blog.with2.net/ad_frame.php?
@@ -805,25 +625,27 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||chaberi.com/html/br/
 ||chem-station.com^*/adrotate-pro/
 ||chixi.jp/img.php?filename=b
-||cinematoday.jp^*affiliate
+||cinematoday.jp/widgets/
+||clipstudio.net^*/banner_
 ||cookpad.com/iframe/
 ||cosp.jp/images/spacer.gif
-||d2fbkzyicji7c4.cloudfront.net^$domain=b9good.com
 ||diced.jp/webs/
 ||dl8x.com/banner/
 ||dl8x.com/product?
 ||dlsite.com/js/blog/DLsiteBlogBanner.js
+||dlsite.com/js/blogparts.js
 ||dmm.co.jp^$domain=exploader.net
+||dmm.co.jp^$domain=jp-xvideos.info
 ||e-typing.ne.jp/app/ad_
 ||eegg.fun/ad_html/
 ||eegg.fun/iframe/
 ||eegg.fun/js/
 ||egone.org/js/amazon_
 ||exploader.net/images/nls/
+||estar.jp/page/ad/
 	! 2017/07/16 動画見れないらしいがこれで見れるらしい
 ||fod.fujitv.co.jp/pc/image/wbhjfr/
-||fod.fujitv.co.jp/mz/*
-||free-video-movie.com^$domain=2dbook.com
+||fod.fujitv.co.jp/mz/
 ||gamespark.jp/feature/advertising/
 ||gehasoku.com/JS/newama.js
 ||getchu.com/mbanner/$~image
@@ -832,30 +654,29 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||google.com/pagead/
 ||google.com/uds/?file=ads&
 ||google.com/uds/api/ads/
+||mail-ads.google.com^
 ||gotporn.com/desktop/js/popunder-
 ||gotporn.com/main/js/exo-loader/
 	||tsyndicate.com/iframes2/*$domain=gotporn.com
 	!2017/10/16 不具合あるかも
 ||grupo.jp/ad_loader/$domain=pitamo.jp
 ||hentai-foundry.com/themes/default/js/activebar.js
-||hitomi.la/tIongEnSEsCe26.js
 ||horne.red/banner/
 ||i-bbs.sijex.net/js/jquery.scrollfollow.js
 ||imagebam.com/files/index2.php
 ||imagebam.com/JS/js-cookie.js
-||imgj.xrea.com^
 ||itmedia.co.jp/css/sa.js
 ||itmedia.co.jp/js/adRequest.js
 ||itmedia.jp/adsv/
 ||jalan.net/jalan/doc/top/js/randombanner.js
 ||japan.cnet.com/parts/frame/
+||japanese.engadget.com^$subdocument
 ||jugem.jp/ad/
 ||kakaku.com^*/kakakuad/
 ||kakaku.com^*/RdmReviewAd.js
 ||kakaku.k-img.com^*/ad/
 ||kidslink.jp/cgi-bin/esb/main.cgi?
 ||kidslink.jp^*/dummy.html
-||kienizer.com/adv/
 ||koepota.jp/js/amazon.js
 ||komachi.yomiuri.co.jp/scripts/g_connect.js
 ||kooss.com/*.htm$subdocument
@@ -865,13 +686,16 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||majo.co.jp/jwd.js$domain=ribbon.to
 ||majo.co.jp/alpc.js$domain=ribbon.to
 	||vinhoverde.sakura.ne.jp$domain=ribbon.to
-||mangamura.org/showads.js
+||mapion.co.jp*/adOverture/
+||mapion.co.jp*/js/vl1.
 ||mangaz.com/virgo/adv/
-||match.seesaa.jp^
+||mdpr.jp/imobile_iframe.html
 ||medibang.com/viewer/fixedAds/
 ||mgstage.com/js/mgs_Widget.js?
 ||mhometheater.com$inline-script
 	||envortudrqy.com
+	!minnano-av.com
+||minnano-*.com/top_center_bn/
 ||mixi.jp^*/adnetwork/
 ||mmmzy.jp^$domain=adbkm.com
 ||muvc.com/winopen.js$domain=muvc.net
@@ -881,22 +705,17 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||new-akiba.com/special/
 	||ura-akiba.jp^$subdocument
 ||nhentai.net/api/
-||nuvidp.com^$domain=nuvid.com
 ||nijie.net/*/banner/
-||news-postseven.com/script/inner_banner.js
-||okwave.jp/ajax_qamatch
-||p.dmm.co*/p/*/bnr
-||padotown.net/js/set_keywords.js
-||padotown.net/js/show_keywords
-||phileweb.com/js/top_banner.js
+||open2ch.net/test/dd.cgi/
+||pawoo.net/packs/media/pawoo/images/about/banner-
 ||phileweb.com/count/
 ||photozou.jp/script/ad_sticky.js?
 ||relart.fresheye.com^
+||resemom.jp/feature/cxense/overlay/
 ||ribbon.to/alpc.js
 ||ribbon.to/rw.php
-||sanspo.com^*/adsence_
+||sankei2ad.durasite.net^
 ||savevideo.me/ads-fallback/
-||sea-saw.com^$domain=2dbook.com
 ||seesaa.jp/frame/
 ||share-videos.se/js/pjs.js
 	||admesia.com^$third-party
@@ -909,43 +728,32 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 	||browsers.support^
 	||zlgokeby.com^
 	||wzismevwhqixlq.com^
-||aj1198.online^$domain=tokyomotion.net
-||toukoucity.to/js/digi
-||toukoucity.to/siteimg/digi/dmmt$domain=toukoucity.to
-||tokyo-porn-tube.com/media/player/ads_
 ||tsumanne.net/maniax.js
 ||tsumanne.net/sa/src/sa.js
 ||twitter.com/i/videoads/
 ||undernavi.com^$domain=adbkm.com
 ||uraaka-joshi.com/pr$subdocument
+||urasma.com^$domain=ura-akiba.jp
+||urasma.com/dmm_
 ||uta-net.com/user/phplib/js/view_jquery.js
 ||utamap.com/banner/
 ||wav.tv/support/adFrame?
-||westatic.com/jsad/$domain=weblio.jp
-||wikiwiki.jp^*/ads_cus.js
+||wiki3.jp/assets/image/yomoyama_advertisement.png
 ||woopie.jp^*/banner/
-||xbooru.com/ex.js?
-||xbooru.com/x/
-||xfantasy.tv/static/ad/
-||xvideos-field5.com/rrjs/
-||yaplog.jp^*/pr.js
-||yaplog.jp/static/js/pc_blog_ad_
-||zdnet.com/parts/frame/ad_
+||yomoyama-bbs.jp/image/ad_images/
+||zyuken.net/juku_page/ads/
 
 !------------------------解析------------------------!
 	!/__tm3k.js
 	!/__utm.
-!nico サムネ消える
-!dl-xvideos.com サムネ
-/1x1.gif$domain=~nicovideo.jp|~dl-x.com|~nlab.itmedia.co.jp
+/1x1.gif?
 /ac.php?
 /acc.cgi?
 /acc.php?
 /accek.js
 /access.aspx?
 /access.cgi
-!ランキングは消さないでおこう
-/access.js$domain=~moeeki.net
+/access.js
 /access.php
 /access_check.cgi?
 /access?
@@ -977,11 +785,8 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ! amazon topページ 背景画像とかpngとか
 /beacon/*$domain=~amazon.com|~amazon.co.jp
 ! amazon 商品画像動画
-! jp.autoblog.com 右下 フォトギャラリー画像
-! dreevee.com じゃんけんのスタートボタン
-! japanese.engadget.com/galleries/ 画像が見れない
 ! rma-api.gravity.com 同上
-/beacon.$domain=~amazon.com|~amazon.co.jp|~jp.autoblog.com|~dreevee.com|~engadget.com|~rma-api.gravity.com
+/beacon.$domain=~amazon.com|~amazon.co.jp
 /beacon_
 /beacon?
 /chartbeat.js
@@ -1003,6 +808,7 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 /getstats.js
 /getstats.php
 /google-analyticator/*
+/google_tag/*
 /googleanalytics.
 /foresee/*
 /freelog.
@@ -1018,13 +824,15 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 /log_view.gif?
 /log2.php?
 /log4.cgi?
+!2020/01/11 外した
 ! bbc.co.uk音出ない
 ! dropbox.com　リンク取得後縮小画像が見えない
 ! radiko.jp 上部メニューが出ない
-/logger.js$domain=~bbc.co.uk|~bbc.com|~dropbox.com|~radiko.jp
+! /logger.js$domain=~bbc.co.uk|~bbc.com|~dropbox.com|~radiko.jp
 /logking.cgi?
 /logset.cgi?
 /logwrite.cgi?
+/rtoaster.js
 /lunasys/analyzer/*
 /lunalys/analyzer/*
 /macgo.js
@@ -1059,6 +867,7 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 /spc.php?
 /stats.js
 /stats.php
+/torimochi.js
 /topref.cgi?
 /trace.cgi?
 /track.js
@@ -1079,14 +888,13 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 /ywa.js
 
 ||2-only.page.ne.jp^$third-party
-! gyao プレイヤー消える
-||2mdn.net^$third-party,domain=~gyao.yahoo.co.jp
 ||2o7.net^$third-party
 ||33across.com^$third-party
 ||3939kaiseki.com^$third-party
 ||6hit.jp^$third-party
 ||a-pagerank.net^$third-party
 ||ac-log.com^$third-party
+||accaii.com^$third-party
 ||accanalyze.com^$third-party
 ||access-radar.jp^$third-party
 ||access-traffic.com^$third-party
@@ -1098,13 +906,16 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||al.l--l.jp^$third-party
 ||amung.us^$third-party
 ||analysiswebtool.com^$third-party
-||analytics.$third-party,domain=ustream.tv
+||analytics.$third-party
+||appsflyer.com^$third-party
 ||ashia.to^$third-party
 ||auriq.com^$third-party
 ||awasete.com^$third-party
 ||axf8.net^$third-party
 ||baynote.net^$third-party
+||bkrtx.com^$third-party
 ||blogchart.jp^$third-party
+||bluekai.com^$third-party
 ||bmmetrix.com^$third-party
 ||botchecker.com^$third-party
 ||ca-mpr.jp^$third-party
@@ -1120,13 +931,11 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||colossal.jp^$third-party
 ||connect.newzia.jp^$third-party
 ||coremetrics.com^$third-party
-||cxense.com^$third-party
 ||decideinteractive.com^$third-party
 ||demandbase.com^$third-party
 ||displaymarketplace.com^$third-party
 ||dlpo.jp^$third-party
 ||docodoco.jp^$third-party
-||durasite.net^$third-party
 ||e-kaiseki.com^$third-party
 ||e-pagerank.net^$third-party
 ||eco-tag.jp^$third-party
@@ -1146,6 +955,7 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||himitsuya.jp^$third-party
 ||histats.com^$third-party
 ||host-tracker.com^$third-party
+||hotjar.com^$third-party
 ||hitgraph.jp^$third-party
 ||i2i.jp^$third-party
 ||i2idata.com^$third-party
@@ -1154,7 +964,7 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||imrworldwide.com^$third-party
 ||infoscan.jp^$third-party
 ||inpros.net^$third-party
-||japanmetrix.jp^$third-party
+||interactive-circle.jp^$third-party
 ||jscount.com^$third-party
 ||juicer.cc^$third-party
 ||just-now.net^$third-party
@@ -1163,9 +973,12 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||keewurd.com^$third-party
 ||kissmetrics.com^$third-party
 ||linkfind.org^$third-party
+||litix.io^$third-party
 ||log-marketing.jp^$third-party
 ||lphbs.com^$third-party
+||marsflag.com^$third-party
 ||mcnt.jp^$third-party
+||mieru-ca.com^$third-party
 ||mmismm.com^$third-party
 ||mobylog.jp^$third-party
 ||mybloglog.com^$third-party
@@ -1178,7 +991,6 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||openstat.net^$third-party
 ||optimizely.com^$third-party
 ||outbrain.com^$third-party
-||owldata.com^$third-party
 ||owneriq.net^$third-party
 ||pagerank.$third-party
 ||pr-icon.com^$third-party
@@ -1240,6 +1052,8 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||f-tra.com^$third-party
 ||hanaprop.com^$third-party
 ||mathtag.com^$third-party
+||mixpanel.com^$third-party
+||mxpnl.com^$third-party
 ||newrelic.com^$third-party
 ||remarketingpixel.com^$third-party
 ||toplist.cz^$third-party
@@ -1250,14 +1064,16 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 
 !----third-party
 ||2bee.jp*/count.php
+||analytics.agoda.com^
 ||analyze.unfinished.jp^
 ||analyzer1.digidigi.jp^
 ||aol.com/ping?
 ||aqtracker.com^
-||b.grvcdn.com^
+||bento.agoda.com^
 ||blogtool.jp/log/a.js
 ||blogtoy.net/add_log?
 ||blozoo.info/js/inouttool/blogparts.js
+||code.usergram.info^
 ||deqwas.net^
 ||disqus.com/stats.html
 ||dw-eu.com.com^
@@ -1271,14 +1087,15 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||just-now.net/p?k=
 ||l.sharethis.com^
 ||l--l.jp/in.cgi?
+||metrics.brightcove.com^
 ||onesignal.com/webPushAnalytics|
 ||sea.pakapeko.com^
 ||seg.sharethis.com^
-||shblog.jp/analysis/
 ||stats.wp.com^
 ||suteki-tool.com/al
 ||suteki-tool.com/pr
 ||tatsumi-sys.jp*.asp?uid=
+||tr.webantenna.info^
 ||tracer.jp^
 ||veritrans.co.jp/bcon/
 
@@ -1291,10 +1108,8 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||analytics.edgekey.net^
 ||analyzer.wox.cc^
 ||analyzer2.curecos.com^
-||ax.xrea.com^
 ||bc.nhk.jp^
-	!動画見れない
-||bing.com/fd/ls/$~ping
+||bing.com/fd/ls/
 ||blog.ocn.ne.jp/ac.php
 ||blogos.com/common/js/kotzen.analytics.js?
 ||bunshun.jp/oo/
@@ -1302,6 +1117,7 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||cnn.co.jp/js/aclick.js
 ||cnn.co.jp/js/ga_social_tracking.js
 ||cnn.co.jp/js/sitesnapi.js
+||collector.githubapp.com^
 ||counter-hosting.*/counter.php?
 ||diamond.jp/oo/
 ||etoyota.net/include/js/measurementBeacon.js
@@ -1310,12 +1126,11 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||fresheye.com^*/js/v
 ||fresheye.com/s.gif
 ||fujitv.co.jp^*/rtx/
+||github.com/_private/browser/stats
 ||gnavi.co.jp/analysis/
 ||ismedia.jp/oo/
 ||kadokawagakugei.com/js/ga2.js
 ||kooss.com/cgi-usr/accl/lkz.cgi?
-||lcs.naver.jp^
-||log.yaplog.jp^
 ||mainichi.jp/js/an.js
 ||milmil.cc/sys/asiato.cgi?
 ||milmil.cc/sys/kaiseki.cgi?
@@ -1339,98 +1154,128 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 ||zokugo-dict.com^*/ac.js
 
 !-----------------------非表示フィルタ-----------------------!
-
 ###ad
 ###ad1
 ###ad2
 ###ads
 ###adsense
-##.ad
+	!wp sidebar
+##.ad:not([class*="widget_"])
+##.ad-area
+	!seiga.nicovideo.jp logsoku等
+##.ad_area
+##.ad-body
+##.ad-container
+##.ad-center
+##.ad-footer
+	!アンテナメーカーだけでもyosage?
+##.ad_footer
+##.ad-rectangle
 ##.ad1
 ##.ad2
 ##.ads
-##.adsbygoogle
 ##.adsense
 ##.adv
 ##.advertisement
-##.vjs-poster
-##.vjs-adblack-overlay
-!wix.com
+
+! https://www.hearst.co.jp/digital/web
+##.breaker-ad
+##.leaderboard-ad
+
+	!google
+##.adsbygoogle
+##.google-user-ad
+###gStickyAd
+
+	!reco
+	||logly.co.jp^$third-party
+	!logly.co.jp
+	!##.logly-lift-ad:not(.logly-lift-article)
+	!popin
+##._popIn_recommend_article_ad
+##._popIn_recommend_article_ad_reserved
+
+	!microad
+##.c-ad
+	! http://2ch-matomenews.com/
+	! http://kankokunohannou.org/
+	! http://www.negisoku.com/
+	! https://news.nifty.com/
+	! 他スマホ用あり
+###float-bnr
+
+###geniee_overlay_outer
+	!seesaa系wiki独
+##.ads-box
+	!seesaablog
+###overlay-ad-div-id
+	!seesaa.net,seesaawiki.jp,blog.ss-blog.jp,fanblogs.jp,at.webry.info 他独自ドメインあり
+###seesaa-bnr
+
+	!wix.com
 ###WIX_ADS
 
-##[id^="ad-"]:not(html):not(body)
-	! #ad_table fc2ブログ管理画面 > 画像高速表示の設定
-##[id^="ad_"]:not(html):not(body):not(#ad_table)
-##[id^="ads-"]:not(html):not(body)
-##[id^="ads_"]:not(html):not(body)
-##[id$="-ad"]:not(html):not(body)
-##[id$="_ad"]:not(html):not(body)
-##[id$="-ads"]:not(html):not(body)
-##[id$="_ads"]:not(html):not(body)
-##[id$="Ad"]:not(html):not(body)
-##[id$="Ads"]:not(html):not(body)
-##[id*="-ad-"]:not(html):not(body)
-##[id*="_ad_"]:not(html):not(body)
-##[class^="ad-"]:not(html):not(body)
-##[class^="ad_"]:not(html):not(body)
-##[class^="ads-"]:not(html):not(body)
-##[class^="ads_"]:not(html):not(body)
-##[class$="-ad"]:not(html):not(body)
-	! .p_no_ad fc2ブログ コメント送信後、確認フォーム
-##[class$="_ad"]:not(html):not(body):not(.p_no_ad)
-##[class$="-ads"]:not(html):not(body)
-##[class$="_ads"]:not(html):not(body)
-##[class$="Ad"]:not(html):not(body)
-##[class$="Ads"]:not(html):not(body)
-	! .ad_distance http://www.paw.hi-ho.ne.jp/milbesos/apldl.shtml
-##[class*=" ad_"]:not(html):not(body):not(.ad_distance)
-##[class*="-ad "]:not(html):not(body)
-	! vjs-ad- 動画消える → http://videojs.com/
-	!			https://www.brightcove.com/
-##[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
-##[class*="_ad_"]:not(html):not(body)
 
+*##div[id^="div-gpt-ad"]:only-child:upward(1)
+*##script[src*="//cdn-fluct.sh.adingo.jp/f.js?"]:first-child + script:last-child:upward(1)
+*##script[src$="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"]:first-child + .adsbygoogle + script:last-child:upward(1)
+*##script:first-child + script[src$="//j.microad.net/js/compass.js"] + div[id]:last-child:upward(1)
+
+
+! criteo
+##script[src$="//static.criteo.net/js/ld/publishertag.js"] + div[id][style*="width:"][style*="height:"]
+##div[id^="crt-"][style]
+
+##div[id^="div-gpt-ad"]
 ##[class^="google-2ad"]
+##[class^="google-user-ad"]
+##[id^="div_fam_async_"]
 ##[style*="width:728px;"][style*="height:90px;"]
+##[style*="width: 728px;"][style*="height: 90px;"]
 
 ##a[href*="http://ad."]
 ##a[href*="infotop.jp/click.php?"]
 ##a[href*="/traffic.php?"]
 
-##a[href^="https://a.popin.cc/popin_redirect/redirect?"]
+!2020/09/26
+!##a[href*="px.a8.net/svt/ejp?"]
+
 ##a[href*="ac.ebis.ne.jp/tr_set.php?"]
 ##a[href*="accesstrade.net/at/"]
 ##a[href*="accesstrade.net/sp/"]
 ##a[href*="affiliate.fc2.com/cgi-bin/click.cgi?"]
 ##a[href*="bannerbridge.net/click"]
-##a[href*="clcount.com"]
 ##a[href*="click.duga.jp/"]
 ##a[href*="click.dtiserv2.com"]
-##a[href*="click.linksynergy.com"]:not([href*="&type=2"]):not([href*="&type=3"]):not([href*="=http%3A%2F%2F"]):not([href*="=http%253A%252F%252F"])
+##a[href*="click.linksynergy.com"]:not([href*="&type=2"]):not([href*="&type=3"]):not([href*="=http"]):not([href*="=https"])
+##a[href*="cross-system.com/click.php"]
 ##a[href*="dgpot.com"][href*="affiliate_banner_id"]
+##a[href*="purelovers.com/lp"]
 ##a[href*="game-news.biz"]
 ##a[href*="liveads.jp/cc.php?"]
-##a[href*="px.a8.net/svt/ejp?"]
+##a[href*="nxcount.com/AdClick/"]
 
 !----amazon
-##.column-inner-2 a[href*="amazon.co.jp"]
-##.plugin-freearea a[href*="amazon.co.jp"]
-##.plugin-freearea1 a[href*="amazon.co.jp"]
-##.sidewrapper a[href*="amazon.co.jp"]
-##.side a[href*="amazon.co.jp"]
-###side a[href*="amazon.co.jp"]
-~amazon.co.jp###sidebar a[href*="amazon.co.jp"]
-###sidemenu a[href*="amazon.co.jp"]
-##.sidemenu2 a[href*="amazon.co.jp"]
-~amazon.co.jp,~amazon.com,~amazon.co.uk,~amazon.co.de##.sidebar a[href*="amazon.co.jp"]
-###sub a[href*="amazon.co.jp"]
-###right a[href*="amazon.co.jp"]
-~amazon.co.jp,~amazon.com,~amazon.co.uk,~amazon.co.de###left a[href*="amazon.co.jp"]
-##.right-container a[href*="amazon.co.jp"]
-##.right-column-inner a[href*="amazon.co.jp"]
-##.left-container a[href*="amazon.co.jp"]
-##.left-column-inner a[href*="amazon.co.jp"]
-###freespace [href*="amazon.co.jp"]
+~amazon.*###freespace a[href*="amazon.co.jp"], #freespace a[href*="amzn.to"]
+~amazon.*###left a[href*="amazon.co.jp"], #left a[href*="amzn.to"]
+~amazon.*###right a[href*="amazon.co.jp"], #right a[href*="amzn.to"]
+~amazon.*###side a[href*="amazon.co.jp"], #side a[href*="amzn.to"]
+~amazon.*###sidebar a[href*="amazon.co.jp"], #sidebar a[href*="amzn.to"]
+~amazon.*###sidemenu a[href*="amazon.co.jp"], #sidemenu a[href*="amzn.to"]
+~amazon.*###sub a[href*="amazon.co.jp"], #sub a[href*="amzn.to"]
+~amazon.*##.column-inner-2 a[href*="amazon.co.jp"], .column-inner-2 a[href*="amzn.to"]
+~amazon.*##.left-column-inner a[href*="amazon.co.jp"], .left-column-inner a[href*="amzn.to"]
+~amazon.*##.left-container a[href*="amazon.co.jp"], .left-container a[href*="amzn.to"]
+~amazon.*##.plugin-freearea a[href*="amazon.co.jp"], .plugin-freearea a[href*="amzn.to"]
+~amazon.*##.plugin-freearea1 a[href*="amazon.co.jp"], .plugin-freearea1 a[href*="amzn.to"]
+~amazon.*##.right-column-inner a[href*="amazon.co.jp"], .right-column-inner a[href*="amzn.to"]
+~amazon.*##.right-container a[href*="amazon.co.jp"], .right-container a[href*="amzn.to"]
+~amazon.*##.side a[href*="amazon.co.jp"], .side a[href*="amzn.to"]
+~amazon.*##.sidebar a[href*="amazon.co.jp"], .sidebar a[href*="amzn.to"]
+~amazon.*##.sidemenu2 a[href*="amazon.co.jp"], .sidemenu2 a[href*="amzn.to"]
+~amazon.*##.sidewrapper a[href*="amazon.co.jp"], .sidewrapper a[href*="amzn.to"]
+##.t_h ~ .t_b ~ [href^="https://www.amazon.co.jp/"]
+##.t_h ~ .t_b ~ .amazon
 
 !----e-nls
 ##.plugin-freearea a[href*="e-nls.com/access"]
@@ -1439,65 +1284,120 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 !----dmm
 !艦これスタートボタン
 ~dmm.com##a[href^="http://ad.dmm.com/ad/p/r?"]
+~dmm.com##a[href^="https://ad.dmm.com/ad/p/r?"]
 ##.plugin-freearea a[href*="dmm.co"]
 ###sidebar a[href*="dmm.co.jp"]
 ##.sidewrapper a[href*="dmm.co.jp"]
 !----dlsite
-~dlsite.com,~dlsite.net##.plugin-freearea a[href*="dlsite.co"]
-~dlsite.com,~dlsite.net##.sidewrapper a[href*="dlsite.co"]
-~dlsite.com,~dlsite.net##a[href^="http://www.dlsite.com/"][href*="http%3A%2F%2Fwww.dlsite.com%2F"]
+~dlsite.com##.plugin-freearea a[href*="dlsite.co"]
+~dlsite.com##.sidewrapper a[href*="dlsite.co"]
+~dlsite.com##a[href^="https://www.dlsite.com/"][href*="https%3A%2F%2Fwww.dlsite.com%2F"]
+~dlsite.com##[href*="dlsite.com"][rel="noopener sponsored"]
 !----楽天
+##.column-inner-2 a[href*="afl.rakuten.co.jp"]
 ##.plugin-freearea a[href*="afl.rakuten.co.jp"]
 ##.sidewrapper a[href*="afl.rakuten.co.jp"]
 ##.side a[href*="item.rakuten.co.jp/"]
 
 
-
-
-1000mg.jp###text-92
-1000mg.jp###text-62
-141tube.com###adultwarningmask
+1000mg.jp##.main-top
+1000mg.jp##div[style^="clear:both;margin-top:0px;margin-"]
+373news.com###ad_prinfo
+373news.com##.mns_span_2columns_left .mns_block
+a-kimama.com##.widget--ad
 adultlog.net,btblog.jp##.story_box:first-child
 adultlog.net,btblog.jp##td.inside
 afpbb.com##.bnr
-asageifuzoku.com###search
-asageifuzoku.com##.pickup
-asageifuzoku.com##.update.dmm
-asageifuzoku.com##.update.smm
+animatetimes.com##[class^="c-banner-"][class*="--w3"]
+animatetimes.com##.l-content-aside > .c-banner-aside:first-child
+! jack
+animatetimes.com##.c-banner-lg-area
+animatetimes.com###times_affiliate-writer
+animatetimes.com##.c-reccomendArea-product
+animeanime.jp##.sidebox-ad
 ascii2d.net##.com
-ashemaletube.com###invideo_wrapper
 ashinari.com##[class^="area-bnr"]
 atwiki.jp###body_footer .lazy
 atwiki.jp###recommend
 atwiki.jp##[id^="advp"]
+atwiki.jp##.atwiki_ads
 atwiki.jp##div[style="width: 160px;height:600px"]
-b9dm.com###ad4
+bakufu.jp###prBox
+bakufu.jp###tertiary > .widget_text:not(#text-2):not(#text-4)
 basso.to,nazca.co.jp##span[style="font-size:12px; line-height:120%;"]:first-child:last-child
-bing.com###b_results > [class^="b_"]:not(.b_algo):not(.b_ans):not(.b_pag):not(.b_msg)
-bing.com##.b_algo:has( > .b_caption > p:matches-css-before(content: "Ad"))
-bing.com##.b_algo:has( > .b_caption > p:matches-css-before(content: "広告"))
-biz-journal.jp###adAmazon
+bbc.com##[class^="AdContainer-sc-"]
+bikebros.co.jp##.breadcrumb:style(margin-top: 20px !important;)
+bing.com##.b_ad:remove()
+bizspa.jp##.ad-wrap
+blog.ss-blog.jp###ad-days-area
+blogmura.com##.ad-header
+blogmura.com##.ad-overlay
+bloomberg.co.jp##.leaderboard-ad-dummy
+booklist.id##[class^="ad-wrap-"]
+bookmeter.com##[style="width: 300px; height: 250px"]
+businessinsider.jp##.f-ad
+businessinsider.jp##.f-content-secondary > style + div
+businessinsider.jp##.p-cardTile-card.adMg
 buttobi.net##div[style="position: relative; z-index:255;"]
+buzzfeed.com##.Ad
+buzzfeed.com##[id^="BF_WIDGET"]
+career.joi.media###post-advertisement
+career.joi.media##.banner
+ceron.jp##div[style]:has([id^="yoneads"])
 chart.sekai-kabuka.com###aswift_0_expand
+chikuwachan.com##.right_advs
+clap.webclap.com##.footer
+clap.webclap.com##div[style="margin:10px 0px 0px;text-align:center;font-size:12px;font-weight:bold;"]
+cinematoday.jp###ct-affiliate-box
+cinematoday.jp##.ct-ad
 coliss.com###sponsors
 coliss.com###sponsorsTop
-comicawa.com###insteOverlay
+curazy.com##.jsViewer_dialog-ad
+curazy.com##.jsViewer_overlay-dialogAd
+cyclestyle.net##.sidebox-ad
+daily.co.jp###adUnderArticle
+daily.co.jp##aside.add
+daily.co.jp##[style="width:300px;height:600px;"]
+daysneo.com###bnrTop
 dl8x.com##[class^="dx-banner-"]
-dtiblog.com###meerkat-wrap
+dl-x.com##._ad
+dl-x.com##.vip-center
+e-nenpi.com##.top_ads
 e-typing.ne.jp##[class^="ad"][class*="00"]
-e0166.blog89.fc2.com###side > .module:nth-of-type(3)
+e-typing.ne.jp##.adbox_468
+e0166nt.com###module
 easter.ne.jp##div[align="center"] > br:first-child
 easter.ne.jp##div[align="center"] > table[width="700"][cellspacing="0"][cellpadding="1"][border="0"]
+erogazopple.com###single-content > [id^="text-"]
+erogazoufactory.com###content [id^="text-"]
+eroido.jp##[class^="adv_"]
+eromazofu.com##.c_c_t_w
 exploader.net###nls
-exploader.net##[href^="https://www.dmm.co.jp/"],[href^="http://www.dmm.co.jp/"]
+exploader.net##article > div[style^="margin-bottom: 10px"]
+famitsu.com##.banner-top-header
+app.famitsu.com###widget-ad-rect
+	!微妙系
+	!famitsu.com##[class^="l-contents-block--tie-up-"]
+	!famitsu.com##.border-col-bottom > [class^="col-"]:has(> .card > [class*="ad-native-campaign"])
+fandom.com##.aff-unit__wrapper
+fandom.com##.wikia-ad
+fate-twitter-matome.com###js-popup
+fate-twitter-matome.com###mainEntity > div:not(.clearfix):not(.meta-box)
+fate-twitter-matome.com###pc-text-widget
 favolog.org###side > div:first-child
+flashfabrica.com##div:has(> script[src="http://pagead2.googlesyndication.com/pagead/show_ads.js"])
+flashfabrica.com##.footer:style(clear:both;)
 freesoft.tvbok.com###left_box3
 freesoft.tvbok.com###right_box1
 freesoft.tvbok.com##.topad
+front-row.jp##.after-btn-fb-nice-ad-pc
+fukuishimbun.co.jp##.admeasure
 getchu.com###rectangle
 getchu.com##.banner
-gizmodo.jp,lifehacker.jp##.amazItem
-gizmodo.jp,lifehacker.jp##.amazon_ranking.section
+gigafile.nu##[class*=banner_type_]
+gizmodo.jp##.l-ad
+gizmodo.jp##.s-body-ad
+gizmodo.jp##.p-post-ad
 google.com,google.co.jp###mbEnd
 google.com,google.co.jp###tads
 google.com,google.co.jp###tadsb
@@ -1506,174 +1406,420 @@ google.com,google.co.jp###wmxmsg
 google.com,google.co.jp###\5f Ltg
 !サイト内検索
 www.google.co.jp##TABLE[cellpadding="0"][style="border: 1px solid #369"]
+greasyfork.org##.ad-entry
 hentai-foundry.com##main > center
 hentai-only.com##.force-foreground.alert.alert-link.alert-dismissible
+hibiki-radio.jp##.programs > .ng-isolate-scope > .ng-scope:nth-of-type(3n+2):not(:nth-of-type(n+11))
+hobonichielog.com##.mainwidget > [id^="text-"]
+hokkaidofan.com##.vce-ad-container
+housingsnap.com##.ad-box
+housingsnap.com##.ad-contents
+hub.vroid.com###Model-adView-2lWBn
+hub.vroid.com##[class^="EventBanner-"]
+idol-blog.com###leftcol div[style]
+idol-blog.com##.col-inner
+idol-blog.com##[id^="post-"] + .box ~ div
 imagis.jp,costype.net##.topadv
+img.favsite.jp##[class$="-lg"]
+img.favsite.jp##[href*="dlsite.com/"]
 inoreader.com##.inno_dialog_modal:not(#login_dialog_wrapper)
 inoreader.com##.inno_dialog_modal_overlay:not(#login_dialog_modal_overlay)
-inside-games.jp###keyword
-inside-games.jp##.adRecommend
-inside-games.jp##.adRecommendRight
-inside-games.jp##.newslistItem-ad
 irasutoya.com##[class^="entryadwrapper"]
-	!ねとらぼ nlab.itmedia.co.jp
-itmedia.co.jp###amazon-item
-itmedia.co.jp##.colBoxAmazon
-jp-xvideos.info##div.waku
-jp-xvideos.info##[style="width:750px;margin: 0 auto; overflow:hidden;"]
-jp-xvideos.info##[style="width:750px;margin: 0 auto; overflow:hidden;"] + div + div + .movie_list.clearfix
-jp-xvideos.info##.movie_list.clearfix + .movie_list.clearfix
-jpidols.tv##body > b
+iwate-np.co.jp##.article-list > li:has-text(広告)
+iwate-np.co.jp##.article-list > li:has(> script)
+ja.whotwi.com###header_ad_area
+ja.whotwi.com##.stats_ad_300x250_2
+japanese.engadget.com###module-engadget-deeplink-top-ad
+japanese.engadget.com###taboola-below-article-thumbnails-2nd
+japanese.engadget.com##div.Mih\(250px\)
+japanese.engadget.com##div.Mih\(90px\)
+jbbs.shitaraba.net###footer-menu + br + table + hr + div
+jbbs.shitaraba.net###footer-menu + br + table + hr + table
+jbbs.shitaraba.net##.thread-list + hr + table
+jiji.com##.ArticleInnerAD
+jisin.jp##.add_left
+jisin.jp##.add_right
+jisin.jp###wrap:style(width: unset !important;)
+jitenon.jp##.ads_wraptop2
+kokugo.jitenon.jp##.kanjirighttb:style(margin-bottom: 30px !important;)
+jocr.jp##.side_adsbygoogle
+jp.gamesindustry.biz##.banner_rectangle
+jp.gamesindustry.biz##.middle_section
+jp-xvideos.info##[style="width:400px;display: inline-block;"]
 jugem.jp##.UBH_new
-jyouhouya3.net##a[href*="amazon.co"]
+jyouhouya3.net##[class^="pnews"]:has( > a[href*="amazon.co"])
+jyouhouya3.net##[class^="pnews"]:has( > a[href*="accesstrade.net/sp/"])
+jyouhouya3.net##[class^="pnews"]:has( > a[href*="px.a8.net/svt/ejp?"])
+jyouhouya3.net#?#[class^="pnews"]:-abp-has( > a[href*="amazon.co"])
+jyouhouya3.net#?#[class^="pnews"]:-abp-has( > a[href*="accesstrade.net/sp/"])
+jyouhouya3.net#?#[class^="pnews"]:-abp-has( > a[href*="px.a8.net/svt/ejp?"])
+jyouhouya3.net##[href*="=jyouhouya3"]
+k05.biz,z0i.net##[id^=gogo-ads-widgets], [id^=gogo-iad-widgets]
+kai-you.net##.l-recommend-product
+kai-you.net##.l-side-common-banner-outer
+kakijun.jp###header1 > div
+kakijun.jp###migi > #kakijun_books
+kakijun.jp###migi > .divcenter
+kakijun.jp###migi > [style="width:160px;height:600px;overflow:hidden;"]
+kakijun.jp##.gadcenter
+kakijun.jp###hidari:style(top: unset !important)
+kakuyomu.jp##[class*="widget-ad-"]
 kakaku.com###listingPr
 kakaku.com###yAuctionBox
 kakaku.com##.listPR
 kakaku.com##.prBn
 kakaku.com##.prTitle
-kemono-friendsch.com##.tax_wrap.clearfix
-kemono-friendsch.com##.tax_wrap.clearfix + .buttons
-kotobank.jp##[class^="ss_"]
-horne.red###main-right > .left_column > .tieup_rand_block
-lifehacker.jp##.amazonSec01
-lifehacker.jp###pc_AmazonSalesArea
-mangaz.com###scroll-adv
+karapaia.com###overlay
+karapaia.com##.readmore-header
+karapaia.com##[class^=ads-label]
+kidsna.com###kidsna-articlelist > ul > li:has(.pr)
+kobe-np.co.jp##.active.native
+kotobank.jp##.pc-iframe-ad
+kurashi-no.jp##[style="width: 300px; height: 600px;"]
+kyounoryouri.jp###floating-banner
+lifehacker.jp##.amazItem
+lifehacker.jp##.lh-banner
+lifehacker.jp##.lh-amazonSec
+lmaga.jp##.contents_ad
+lmaga.jp##.header_ad
+logsoku.com###fixed_area
+logsoku.com##div:not([id^="contents-"]):has(> .ad_area)
+logsoku.com#?#div:not([id^="contents-"]):-abp-has(> .ad_area)
+logsoku.com##.thread-box > [class^="thread-"] > [id^="thread-"] > tbody > tr:first-child
+loveh.org##div:has(> script[src="http://static.adroute.focas.jp/js/adroute_ads.js"])
+loveh.org##a[href=""]
+loveh.org##a[href^="https://www.dmm.co.jp/"]
+maho.jp##.Ad
+magnet-novels.com##.adBox
 mainichi.jp###SuggestKeyWord
 mainichi.jp###SuperBanner
 mainichi.jp##.ArticleAdKW
-matome.naver.jp###yads_pc_overlay
+making.pipa.jp##.NoFrame.RelatedWorkRight
+mangacross.jp###top-component > [style^="background: rgb(255, 255, 255) none repeat scroll 0% 0%;"]
+manager-life.net##[id^="ad_"]
+mangahack.com##[class^="ad_"]
+mangalove.me##.lastInterstitial
+mangalove.me##.interstitial
+mangalove.me##li:has(> .native-ad-wrap)
+mangalove.me##.viewerBody,.viewer,.viewer .slick-list,.viewer .slick-track,.viewer .imgWrap,.viewer .lastPage.slick-slide:style(height: 100% !important;)
+mangalove.me##.viewer,.lastWrap:style(padding-bottom: 0 !important;)
+mangalove.me##.pr_00 .title:style(width: 135px !important;)
+mangaz.com###scroll-adv
+mantan-web.jp##.ad-rec
+mantan-web.jp##.ad-wrap
+matomedane.jp##.adv_top
+matomedane.jp##.pc_header_bottom_adv
+medibang.com##.asArtStreetTopIllustAd
 medibang.com##.mdbnAdBlock
 medibang.com##.mdModal
+medibang.com##[class^="adBlock__"]
 	!mobile
 medibang.com##.mfp-ready
 medibang.com##.viewer-bottomBanner
+meitou.info###aside
+meitou.info##[href^="https://amzn.to/"], [href^="https://www.amazon.co.jp/"]
+meitou.info##[href^="https://amzn.to/"] + small
 mhometheater.com##[href^="https://airw.net/"]:not(:first-child),[href^="http://blogrank.toremaga.com/"],[href^="https://blogranking.fc2.com/"],[href^="https://blog.with2.net/"]
+middle-edge.jp###detad
+mimizun.com##.ad300x250
+mimizun.com###thread:style(position: relative; left: -312px;)
+minkara.carview.co.jp##.overlay-ad
+mixi.jp##.adsenseBannerArea
 mmm.me###imadv
+moae.jp##[class^="mod-ad-"]
 moeeki.net###newboxleft > p
 moeeki.net###sidebar2
 moeeki.net##.clearLeft + br + br ~ .imagebox
-mogera.jp##.bigbanner
+mogera.jp##.panel-ad
+mogera.jp##[id^="gadUnit"]
+moguna.com##.Post-bottom
+moguna.com##.side-bar-ad
+momon-ga.com###menu-pr
+mora.jp##.jack
+mora.jp##.newrelease_adBox
+mora.jp##.rect_box
+mora.jp##.top_ad
+mora.jp##.top_adBox
+mora.jp##.package_adBox
+mora.jp##.page_adArea
+mora.jp##.wide_ad
+mora.jp##.wide_adBox_footer
+mora.jp##.special_adBox
+mora.jp###special_adBox_bg
 muvc.net##body > div[align="right"]:last-of-type
-nyaa.se###main div[style^="float:left;"]
-nyaa.se###main > div:nth-of-type(2)
-natalie.mu##.NA_ad300x250
-natalie.mu##.NA_relatedItem
+nagasaki-np.co.jp##.article_ad:remove()
+navitime.co.jp###under-advertisement
+nazology.net##.side-adblock
 new-akiba.com###bannerJ
 new-akiba.com##.amazon-sidelist
 new-akiba.com##.amazon-sidelist-right2
 new-akiba.com##.top-column-onsale
 new-akiba.com##.top-column-product
 new-akiba.com##.top-column-sidelist2
-novelba.com##.exception_flag
-ura-akiba.jp##.dlg
-ura-akiba.jp##a[href^="http://dl.getchu.com/ura_akiba/"]
-navitime.co.jp###under-advertisement
 news.mixi.jp##.adsenseBannerArea
+news24.jp###adText01
 nicofinder.net###video-ichiba
+nicozon.net###ichiba
 nikkansports.com##[id^="sideAd"]
-nijie.info,horne.red##[class*="tieup_"]
+nijie.info,horne.red###footer-banner
+nijie.info,horne.red###header_banner_wrapper
+nijie.info,horne.red##.left_column
+nijie.info##._ad, [href^="/ad.php"]
 nikkansports.com##.adBECOME
+nlab.itmedia.co.jp###globalHeader
+novelup.plus##[class^="ad-"]
+novelba.com##.exception_flag
 northwood.blog60.fc2.com###menu1Block > .menuBlockBase:first-child
 npn.co.jp###arata5
 nuwton.com##[class*="banner-"]
-nuvid.com##.puFloatLine
+nyaa.si##.servers-cost-money1
+o-uccino.jp##[class^="float_banner_"]
 oekaki1.basso.to,oekaki2.basso.to##form[action="./oekaki.cgi"] + div[align="center"]
-oekakies.com##body > p:first-child + center
-oekakies.com##center + center > a
-oekakies.com##hr:nth-last-of-type(2) + center
-oekakies.com##table[cellpadding="2"][border="1"]
-oekakies.com##table[cellspacing="3"][border="0"]
-okwave.jp##.big_bnr
-otakomu.jp##a[href*="amazon"]
+okwave.jp##.pickup
+onlinegamer.jp###adPC
+onlinegamer.jp##.spsiteDmmRecommend
+onlinegamer.jp,gamer.ne.jp##.contentWrap:style(margin-top: 90px !important;)
+open2ch.net##.kokoku
+or2.mobi##.single_ad
+or2.mobi##.top_ad
+orangepage.net##.doubleRectangle
+orangepage.net##.recipeBlock.clearfix.pr
+orteil.dashnet.org###smallSupport
+orteil.dashnet.org###support
+osayama.com##[id^="osaya-"]
+otapol.com###entryAdAmazonArea
 parupunte.net##div[style="background-color: #F0E0D6; width: 700; text-align: left;  margin: 0 auto 20; padding: 16px;"]:has( > a[href^="https://www.amazon.co"])
 parupunte.net#?#div[style="background-color: #F0E0D6; width: 700; text-align: left;  margin: 0 auto 20; padding: 16px;"]:-abp-has( > a[href^="https://www.amazon.co"])
-ppp.atbbs.jp##td[style="width:800px;border:solid 0px #000;text-align:center;padding:5px;"]
+pashplus.jp##.google_ads
+pashplus.jp##.single_bnr_wrap
+picrew.me##.c_ad_wrapper
+picrew.me##.discovery_list_ad
+picrew.me##.imagemaker_ad_wrapper
+picrew.me##.imagemaker_container:style(height: 100% !important;)
+pixiv.net###js-mount-point-header:style(min-height:unset!important;)
+pixiv.net##div:has( > iframe:not([src]))
+pixiv.net##li:has(> iframe[width="184"][height="232"])
+pixiv.net#?#li:-abp-has(> iframe[width="184"][height="232"])
+pixiv.net#?#div:-abp-has( > iframe:not([src]))
+comic.pixiv.net###__next > [class^="jsx-"] > div:style(height: 100vh !important;)
+pointdream.jp###geniee_overray_base
+pointtown.com##.pt-side-ad
+pokemon-matome.net###header_ads
+pokemon-matome.net###hoge
+pokemon-matome.net##.inner
+pokemon-matome.net##.inner_footer
+pokemon-matome.net##.kiji_chuubu
+pokemon-matome.net###header_rtranking:style(top: 120px !important;)
+pokemon-matome.net##[id^="container_in"]:style(margin-top: 240px !important;)
+prcm.jp##.ad-rectangle
 projectdesign.jp###base-register
+qiita.com##.ad-300x250
+qiita.com##.it-Ads_afterBodyContainer
+qiita.com##.p-home_ad
+qiita.com##[id^=logly-lif]
 	!https://hobbyjapan.co.jp/comic/series/
 r.binb.jp###adp
-rbbtoday.com###adHeader
-rbbtoday.com###headerMiddleRight
-rbbtoday.com##.adArticleSidetile
+rbbtoday.com##.cx-top-news
+realsound.jp###ad_entryBottom
+realsound.jp###adEntry2rec
+resemom.jp##.sidebox-ad
 ribbon.to##p[align="center"]:has( > [tareget="rdn"])
 ribbon.to##p[align="center"]:has( > [href^="http://ribbon.to/ribbon_link.php?"])
 ribbon.to#?#p[align="center"]:-abp-has( > [tareget="rdn"])
 ribbon.to#?#p[align="center"]:-abp-has( > [href^="http://ribbon.to/ribbon_link.php?"])
+rookie.shonenjump.com##[class^="media-"][class$="-banner"]
+saga-s.co.jp##.double-rectangle
+saga-s.co.jp##.top-banner
+saitama-np.co.jp###ad_middle
 sankakucomplex.com##[class^="adbmodal-"]
+say-move.org###my_navigation:style(padding-top: 10px !important)
+say-move.org##.wrap_player:style(padding-top: 0 !important)
+scraiv.com###main_inner + .max-600
+scraiv.com###main_inner:style(height: unset !important;)
+scraiv.com###main_inner::after:style(background-image: none !important;)
 search.carview.co.jp##.side_ss
 search.carview.co.jp##.sponsor
+sekai-kabuka.com##table[id][width="100%"][cellspacing="0"][cellpadding="0"][border="0"] > tbody > tr > td[align="center"] > div[id][class]:style(height: 1px !important;)
+sekai-kabuka.com##.tb-r2 > table > tbody > tr > td:not([valign="top"])
 sekkaku.net##[summary="AD"]
 sekkaku.net##[summary="広告欄"]
-seesaa.net,seesaawiki.jp,blog.so-net.ne.jp###seesaa-bnr
-jbbs.shitaraba.net###footer-menu + br + table + hr + table[width="640"][cellspacing="2"][cellpadding="2"]
+server-setting.info###pr_bottom
+server-setting.info###pr_side_top
+share-videos.se###ad_html
+sirogohan.com##.ad-halfwrap
+sirogohan.com##.ad-sponsor
 sound.jp###adfloat
-sponichi.co.jp###relation-block
+sponichi.co.jp##[id^=space_shopping_]
+srad.jp###ads-article-left
+srad.jp###ads-index-text
+srad.jp###gpt-sd_index_rec
+srad.jp###tophat
+srad.jp##.srad-contentad-banner
 startpage.com###spon_links
-streamin.to##a[href*=".com/analytics/"]
-streamin.to##[style^="z-index: 2000;"]
-syosetu.com##.koukoku_728
+storia.takeshobo.co.jp##.mfp-ready
+storia.takeshobo.co.jp##html:style(overflow:unset!important;)
+storie.jp##[class^="banner"]
+supersolenoid.jp,supersolenoid.blog.fc2.com##.wboxlink
+supersolenoid.jp##.EntryMore > h2:last-of-type ~ a[href^="https://affiliate.suruga-ya.jp/"]
+supersolenoid.jp##.EntryMore > h2:last-of-type ~ a[href*="://www.amazon.co.jp"]
+syosetu.com##[class^="koukoku_"]
+tabinobi.jp##.main-wrap > .detail-block ~ .thumb-block + .thumb-block
+teacup.com##center:has(img[src^="//adimg.teacup.com/"])
+teacup.com#?#center:-abp-has(img[src^="//adimg.teacup.com/"])
 tegaki.pipa.jp##.AdX300x250
+tenki.jp##[class^="tenki-ad"]
+tg-uchi.jp##.topicBanner
+this.kiji.is###js-ur
 tinami.com###banner_view
-togetter.com###amazon_reco_box
-tokyo-tube.com##.banner-base
+tinami.com##.view_ad
+togetter.com##.ad_custom
+togetter.com##.ad_custom_fluid
+togetter.com##.ad_list_top
+togetter.com##.ad_rectangle
+togetter.com##.ad_topics_custom
+touhouyaruosure.com##[href*="dlsite.com"]
+touhouyaruosure.com##[href*="dmm.co.jp"]
+touhouyaruosure.com##[href*="suruga-ya.jp"]
+touhouyaruosure.com##[style="margin:0;padding:5px;font-size:12px;word-break: break-all;"]
 tsumanne.net###amazon
 tsumanne.net###cm
-twitter.com##.modal-overlay
-twitter.com##.promoted-tweet
-twitter.com##.promoted-tweet-heading
-twitter.com##div:not([class]):not([style]) div.css-1dbjc4n div:has-text(プロモーション)
+tv-asahi.co.jp###rectangle-desktop
+tv-asahi.co.jp##.common-header-pc-v2__commonHeader--koWP-:style(padding-top: 0 !important)
+tv-asahi.co.jp##.init-ad
+twilog.org##[style^="height:250px"]
+twitter.com##div[data-testid="placementTracking"]:has(svg + div[dir="auto"] > span:has-text(/Promoted|プロモーション/))
+twitter.com##div[data-testid="trend"]:has-text(/Promoted|プロモーション/)
+twitter.com##div[data-testid="UserCell"]:has-text(/Promoted|プロモーション/)
+twitter.com#?#div[data-testid="placementTracking"]:-abp-has(svg + div[dir="auto"] > span:-abp-contains(/Promoted|プロモーション/))
+twitter.com#?#div[data-testid="trend"]:-abp-contains(/Promoted|プロモーション/)
+twitter.com#?#div[data-testid="UserCell"]:-abp-contains(/Promoted|プロモーション/)
+upup.be###headeradv:style(height: 0 !important; margin: 0 !important; padding: 0 !important; clear: both !important;)
 uta-net.com###banner_original
 uta-net.com###recommend
 uta-net.com###view_amazon
-vector.co.jp###adBox
 vidoza.net##.pvr
-n.shop.vector.co.jp###vsSubTableContent
-veoh.com###CM8ShowAd_Rectangle_300x250
-webclap.com##.footer
-webclap.com##div[style="margin:10px 0px 0px;text-align:center;font-size:12px;font-weight:bold;"]
-weblio.jp##.AmaznUl
-weblio.jp##.jWAdsF
-weblio.jp##.RktnUl
-weblio.jp##.sideBxStGyEst
-weblio.jp##.ydnSwCls
+walkerplus.com##.m-prbnr
+watch.impress.co.jp##.billboard
+web-ace.jp##[class^="ad_rect"]
+wiki.seesaa.jp##.banner
+wiki.seesaa.jp##.banner-footer
+www.asahi.com###HometopAd
+www.asahi.com##.AdMod
+www.j-cast.com##.ad-rectangle-bnr
+www.j-cast.com##.ad_entry_toptext
+www.j-cast.com##.adunit
 ! 朝目新聞
-www.ne.jp##body[vlink="#0033CC"][text="#000000"][link="#3300FF"][bgcolor="#FFFFFF"] > table[cellspacing="0"][cellpadding="0"] a[href*="amazon.co.jp/"]
+www.ne.jp##body[vlink="#0033CC"][text="#000000"][link="#3300FF"][bgcolor="#FFFFFF"] table p:has(> font[size="-1"] > :is(a[href^="https://amzn.to/"], a[href^="https://www.amazon.co.jp/"][href*="asameshinbun-22"]))
+www.ne.jp#?#body[vlink="#0033CC"][text="#000000"][link="#3300FF"][bgcolor="#FFFFFF"] table p:-abp-has(> font[size="-1"] > :is(a[href^="https://amzn.to/"], a[href^="https://www.amazon.co.jp/"][href*="asameshinbun-22"]))
 xtube.akicompany.com##.col-xs-12:nth-last-of-type(1)
 xtube.akicompany.com##.col-xs-12:nth-last-of-type(2)
 xvideo-jp.com###dmmad
+xvideo-jp.com##.p-article__sub
 xvideo-jp.com##.p-articleDMM
 xvideo-jp.com##.p-dmmad
 xvideo-jp.com##.c-card:has([href^="http://xvideo-jp.com/mgs/"])
 xvideo-jp.com#?#.c-card:-abp-has([href^="http://xvideo-jp.com/mgs/"])
-yu.to##style + script[language="JavaScript"] + div[align="center"]
+zyuken.net##.AdImg
 
 
+!------------5ch pink------------!
+||i2ad.jp^
+||thench.net^
+||banpro.in.coocan.jp^
+||5ch.net/_ads/
+||bbspink.com/css/ad.css
+5ch.net,bbspink.com###banner
+5ch.net##[id^="js--banners--"]
+5ch.net##.ADVERTISE_AREA
+5ch.net##.ADVERTISE_AREA + div
+bbspink.com##[class$="_banner"]:not(.sidemenu_banner)
+bbspink.com##[class^="banner_"]
+bbspink.com###bbspink-bottom-ads
+pinktower.com##div
 
+!------------alphapolis------------!
+||s3-ap-northeast-1.amazonaws.com/seedapp-script/adloader.js
+alphapolis.co.jp##.wrapper ~ #TopLayer
 
+!------------angelfire.com------------!
+angelfire.com##div[style="background:#abe6f6; border-bottom:1px solid #507a87; position:relative; z-index:9999999"]
+||angelfire.com/adm/
+||lycos.com/catman/init.js
 
-!------------aol-----------------!
+!g------------animeflv.ru----------!
+animeflv.ru##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
+animeflv.ru##+js(setInterval-defuser.js, (), 500)
+animeflv.ru##+js(set-constant.js, check_adblock, true)
+||animeflv.ru^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval'
 
-!画像が見れない http://japanese.engadget.com/galleries/
-!||aolcdn.com/omniunih_int.js
-!||aolcdn.com/omniunih.js
+!------------artemis------------!
+||live.fc2.com/liveBlogParts.php$subdocument,domain=artemisweb.jp
+||club-xxx.net/index.php$subdocument,domain=artemisweb.jp
+||contents.fc2.com/parts/parts_frame.php?$domain=artemisweb.jp
+artemisweb.jp###active_overlay
+artemisweb.jp##body > center:first-of-type
+artemisweb.jp##body > center:last-of-type:has(a[href="http://www.artemisweb.jp/"][target="_blank"])
+artemisweb.jp#?#body > center:last-of-type:-abp-has(a[href="http://www.artemisweb.jp/"][target="_blank"])
 
-||aolcdn.com^*/ads/
-||b.engadget.com^
-||engadget.com/traffic/
+!------------biglobe------------!
+biglobe.ne.jp###h_bar
+biglobe.ne.jp##.bl-top-square
+news.biglobe.ne.jp##[class^="news-ad-square-"]
+news.biglobe.ne.jp###SPbanner
+news.biglobe.ne.jp###gadsOverlayUnit
+
+!g----------coolrom.com------!
+coolrom.com.au###grumftFeMainContainer
+coolrom.com.au##td[width="325"][height="250"]
+coolrom.com.au##td[style="height:90px;"][align="center"]
+coolrom.com.au##div[style="min-height:250px;"]
+coolrom.com.au##+js(set-constant, time, 0)
 
 !------------dmm-------------!
 ||dmm.ad-s.org^$third-party
 ||dmm.afisapo.com^$third-party
 ||dmm-rank.com^$third-party
-
 ||dmm.co.jp/dmmad/
 ||dmm.co.jp/images/affiliate_banner/
+||dmm.co.jp/af/
 ||dmm.com/af/
 	!ブログパーツ
 ||dmm.com/photo/blog-parts/*&affiliate_id=
-
 ||dmm.co*/js/banner_placement.js?affiliate_id=
 ||dmm.co*/js/placement.js
 ##a[href*="dmm.ad-s.org"]
+
+!------------dtiblog------------!
+||dtiserv.com^$third-party
+||dtiserv2.com^$third-party
+||dtiblog.com/pr_ad/
+||dtiblog.com*/blog_ppv/
+||dtiblog.com*/kokuchi/
+||analyzer*.dtiblog.com^
+||dtiblog.com/hist_count.php
+dtiblog.com###meerkat-wrap
+
+!------------ero-video.net------------!
+*$third-party,domain=ero-video.net
+||ero-video.net/advert/*
+ero-video.net##+js(aeld, DOMContentLoaded, showPopUpBanner)
+
+!------------eroterest.net--------!
+/kok/*$domain=eroterest.net
+||okbp.xyz^
+eroterest.net##.adAreaNative
+eroterest.net##.adAreaNativeDmm
+
+!------------excite------------!
+||excite.co.jp/jp/ad/
+||excite.co.jp/jp/ox/
+newssearch.excite.co.jp,websearch.excite.co.jp##.searchResults > aside
+woman.excite.co.jp###header_bnr
+www.excite.co.jp##.extra
+!ほにゃく
+www.excite.co.jp##.ad728
+www.excite.co.jp###rakutenMW
+exblog.jp##div:has(> #gpt_pc_blog_header)
 
 !------------futaba-------------!
 ||2chan.net/bin/*.htm
@@ -1685,77 +1831,294 @@ yu.to##style + script[language="JavaScript"] + div[align="center"]
 ||2chan.net/bin/uuacount.php?*
 ||2chan.net/bin/uucount.php
 
-!-----------kiss-------------!
-$script,third-party,domain=kissanime.ru
+!----------gesoten.com-----------!
+!jack
+gesoten.com##.r-l-pagejack-link
+gesoten.com##.r-wrapper--pagejack:style(background-image: none !important;)
+gesoten.com##.l-pagejack-link
+gesoten.com##.l-wrapper--pagejack:style(background-image: none !important;)
 
-||fingahvf.top^$third-party
-||propellerads.com^$third-party
-||rotumal.com^$third-party
-||wranjeon.xyz^
-||adqy6rzwcs.com^
-||fembed.com^
+gamebox.gesoten.com##.ad_half
+gamebox.gesoten.com##.ad_rectangle
+gamebox.gesoten.com##.ad_super
+@@||gamebox.gesoten.com/googleads_ima_html5_samples/advanced/ads.js?$script,domain=gamebox.gesoten.com
+@@||imasdk.googleapis.com/js/core/$subdocument,domain=gamebox.gesoten.com
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=gamebox.gesoten.com
 
-||rapidvideo.com/tube-skin-retina-for-videojs-6/bin/video-js-6.2.0/ie8/videojs-ie8.min.js
-||rapidvideo.com/js/jquery.min.js
-rapidvideo.com##^script:has-text(window)
+!------------goo------------!
+||adcdn.goo.ne.jp^
+||ams900.goo.ne.jp^
+goo.ne.jp##[id^="gooad-"]
+blog.goo.ne.jp###mod-advertising
+blog.goo.ne.jp###mod-goo-recommends
+blog.goo.ne.jp##.navbar__link--left
+||log000.goo.ne.jp^
+!gesoten
+game.goo.ne.jp##.ad_half
+game.goo.ne.jp##.ad_rectangle
+game.goo.ne.jp##.ad_super
+@@||game.goo.ne.jp/googleads_ima_html5_samples/advanced/ads.js?$script,domain=game.goo.ne.jp
+@@||imasdk.googleapis.com/js/core/$subdocument,domain=game.goo.ne.jp
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=game.goo.ne.jp
 
-kissanime.ru###adsIfrme7
-kissanime.ru###divFloatLeft
-kissanime.ru##.clear2
-kissanime.ru##.divCloseBut
-kissanime.ru##[style="width:920px;"]
-kissanime.ru##[style^="border-color: #4e4e4e !important; position: relative;"]
+!-----------hatena-----------!
+	!hateblo.jp,
+	!hatenablog.com,jp,
+	!hatenadiary.com,jp,org
+##.sleeping-ads
+##.insentence-adsense
+anond.hatelabo.jp,hatena.ne.jp##.double-rectangle
+hatenanews.com##.ads-250
+a.hatena.ne.jp##.side-ad
+b.hatena.ne.jp##.centerarticle-aside-ad
+b.hatena.ne.jp##.js-keyboard-selectable-item[data-river-placement]
+b.hatena.ne.jp##[class^="entrylist-ad-"]
+!？
+b.hatena.ne.jp##.js-hotentries.is-nativeads-loading > li:nth-child(4) > .entrylist-contents > .entrylist-contents-main,.js-hotentries.is-nativeads-loading > li:nth-child(8) > .entrylist-contents > .entrylist-contents-main:style(display: block !important;)
+b.hatena.ne.jp##[class^="entry-ad-"]
+d.hatena.ne.jp##div:has(> div > div > [id^="ad-hba-"])
+d.hatena.ne.jp##section > div:not([id]):not([class])
+q.hatena.ne.jp##.hatena-asin-detail
+q.hatena.ne.jp##.sidebar-banner
+!言及先エントリを開くが消える
+@@||www.googletagmanager.com/gtm.js$script,domain=anond.hatelabo.jp
 
-@@||kissanime.ru/ads/
+!g-----------hitomi.la-----------!
+hitomi.la##+js(aopr, pops)
 
-kissanime.ru##+js(setTimeout-defuser.js, /YANMKABFYWRW|YANABWEKA/)
-kissanime.ru##+js(abort-current-inline-script.js, $, AdBlock)
-kissanime.ru##+js(abort-current-inline-script.js, parseInt, incrementClicks)
-kissanime.pro##+js(abort-current-inline-script.js, RegExp, zfgloaded)
-kissanime.*##+js(kissanime-defuser.js)
-kissanime.*##+js(set-constant.js, check_adblock, true)
-||kissanime.ru^$subdocument,first-party
-@@||static.animecdn.stream/themes/vast/videojs.ads.min.js$script,domain=kissanime.ac
-@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=kissanime.ac
+!g-----------kissanime-----------!
+!nz
+||demand.supply^$third-party
+||ga.kvideo.io^
+||ikunselt.com^
+||in-page-push.com^
+||omfortsex.club^
+||opsoomet.net^
+||ptoushoa.com^
+||vipicmou.net^
+||kissanime.nz/api/pop.php
+||kissanime.nz/rmad.php?
+!ws
+||graizoah.com^
+||ntvsw.com^
+||painsko.com^
+||staitchu.com^
+||webpinp.com^
+!digital
+||kissanime.digital/addons/*.gif|$image
+kissanime.digital##main + script + div[class]
 
-!------------animeflv.ru----------!
-animeflv.ru##+js(addEventListener-defuser.js, /^(?:click|mousedown)$/, _0x)
-animeflv.ru##+js(setInterval-defuser.js, (), 500)
-animeflv.ru##+js(set-constant.js, check_adblock, true)
-||animeflv.ru^$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval'
+kissanime.*##+js(set, check_adblock, true)
 
+!------------livedoor------------!
+||gsspcln.jp^
+||coppedex.com^
+||counter2.blog.livedoor.com/c?ro=1&act=rss
+||livedoor.jp/js/c2.js
+||t.blog.livedoor.jp^
+###meerkat-contents
+	!blog cookie承認バナー
+###gdpr-banner
 
-!------------alphapolis------------!
-||s3-ap-northeast-1.amazonaws.com/seedapp-script/adloader.js
-alphapolis.co.jp###TopLayer
+!g--------loveheaven.net---------!
+||a.vdo.ai^
+||cogleapad.com^
+||dyecowwhy.com^
+||exdynsrv.com^
+||eyefuneve.com^
+||jiltlargosirk.com^
+||lzrikate.com^
+||mehebborc.com^
+||prosumsit.com^
+||adform.net^$third-party
+||adxpub.com^$third-party
+||bidadx.com^$third-party
+||creativecdn.com^$third-party
+||tapad.com^$third-party
+||viglink.com^$third-party
+||vlitag.com^$third-party
+||spolecznosci.net^$third-party
+||inpagepush.com^$important
+loveha.net,loveheaven.net##.float-ck
+loveha.net,loveheaven.net##.quang-cao
+loveha.net,loveheaven.net##.quang-cao + center
 
-!------------artemis------------!
+loveha.net,loveheaven.net##br + br + br +h3
+loveha.net,loveheaven.net##.chapter-img + br + br + br + center
+loveha.net,loveheaven.net##.chapter-img + br + br + br + center + br
+loveha.net,loveheaven.net##.chapter-img + br + br + br + center + br + br
+loveha.net,loveheaven.net##.chapter-img + br + br + br + center + br + h3
 
-||live.fc2.com/liveBlogParts.php$subdocument,domain=artemisweb.jp
-||club-xxx.net/index.php$subdocument,domain=artemisweb.jp
-artemisweb.jp###active_overlay
-artemisweb.jp##body > center:first-child
-artemisweb.jp##body > center:last-of-type:has(a[href="http://doga-search.artemisweb.jp/"])
-artemisweb.jp#?#body > center:last-of-type:-abp-has(a[href="http://doga-search.artemisweb.jp/"])
+!--------------msn----------------!
+://c.*/c.gif?
+||srtb.msn.com^
+msn.com##.nativeadasideplaceholder
+msn.com##.nativeadserversidecontentmodule
+msn.com##.sameoab_ad_container
+msn.com##.widead
 
-!------------angelfire.com------------!
-angelfire.com##div[style="background:#abe6f6; border-bottom:1px solid #507a87; position:relative; z-index:9999999"]
-||angelfire.com/adm/
-||lycos.com/catman/init.js
+!------------nan-net.com-------------!
+||mbadw.nan.co.jp^
+||mbadv.nan.co.jp^
+||tool2.nan-net.com/exposure.jpg
+nan-net.com###banner
+nan-net.com##div[style$="background-color:#FFF;padding:20px;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;border:1px dashed #ff00ae;"]:has([src^="//adm.shinobi.jp"])
+
+!------------nicosub.net------------!
+||dlsite.com^$domain=nicosub.net
+||nicosub.net/api/dlsite/
+nicosub.net###seigarakuten
+
+!------------nicovideo ニコニコ動画------------!
+!アンケート
+!||enquete.nicovideo.jp/static/
+!ニコ生
+||nimg.jp/relive/playerbanner/
+nicovideo.jp##.ads_list_area
+ch.nicovideo.jp##.ads_nicovideo
+dic.nicovideo.jp###right-column > div[style="text-align:center; height:250px; width:300px; margin:0 0 4px 0;"]
+dic.nicovideo.jp##.ad-bannar-maincolumn-top
+dic.nicovideo.jp##.adsense-728
+live.nicovideo.jp##.kokoku
+live2.nicovideo.jp##[class^="___banner-panel___"]
+seiga.nicovideo.jp###ads_pc_seiga_illust_watch_east
+!ニコニ広告全般
+@@||uad.nicovideo.jp^$generichide
+! adsblocking
+@@||html5.nicogame.jp/misc/ads.js$script,domain=game.nicovideo.jp
+
+!------------nikkei------------!
+||nikkei.com/.resources/k-components/rtoaster/
+||nikkei.com/api/mainos/v4/trendwatch
+||nikkei.com/fh/showad_
+||astat.nikkei.com^
+||nikkei.*^*/SC/
+||nikkei.*^*/SC2/
+||nikkei.com/.resources/tracking/
+||nikkei.jp^*/f1h_text1.js
+business.nikkei.com##.cbCxense
+business.nikkei.com##[class^=recommendAd]
+r.nikkei.com##.search__promo
+r.nikkei.com##.trendwatch
+style.nikkei.com##.ad_inview
+style.nikkei.com##.ccZzQU
+style.nikkei.com##.fxllUl
+style.nikkei.com##.jJEPlL
+www.nikkei.com##.PRb
+www.nikkei.com##.k-ad__text
+www.nikkei.com##.k-hub-layout__container--ad-recommend
+www.nikkei.com##.k-hub-layout__container--section-top-trendwatch
+www.nikkei.com##.k-hub-pr
+www.nikkei.com##.newsTrendWatch
+xtech.nikkei.com###sticky1 > section.l-asideSection:first-child
+xtech.nikkei.com##.bptable + .l-section
+xtech.nikkei.com##.p-article + .l-section
+xtech.nikkei.com##.p-article_ad
+
+!------------rakuten-楽天------------!
+||adroll.com^$third-party
+||afl.rakuten.co.jp^
+||dynamic.rakuten.co.jp^
+||ias.rakuten.co.jp^$domain=~event.rakuten.co.jp
+||xml.affiliate.rakuten.co.jp^
+||books.rakuten.co.jp/pzd_contents/js/ranking-ad/*
+||rakuten.co.jp/com/js/d/$domain=~item.rakuten.co.jp
+||rakuten-static.com/1/grp/banner/js/create.js
+||rakuprop.net^$third-party
+||pzd.rakuten.co.jp^
+||rat.rakuten.co.jp^
+||rd.rakuten.co.jp^$domain=~rd.rakuten.co.jp
+||rt.rakuten.co.jp^
+||rakuten.co.jp/common00/omuniture/
+||websearch.rakuten.co.jp/elog?
+##form[action*="afl.rakuten.co.jp"]
+plaza.rakuten.co.jp###commonAdsParts
+recipe.rakuten.co.jp##.bnrCenter
+recipe.rakuten.co.jp##.rightNaviBanner
+recipe.rakuten.co.jp##.subContentsLink
+
+@@||image.www.rakuten.co.jp/com/js/d/
+	!楽天銀行トップ、「お問い合わせ」の中身が表示されない
+@@||rakuten-bank.co.jp/shared/js/ad.js?$script,domain=rakuten-bank.co.jp
 
 !------------sitemix・tok2.com------------!
 /ad.min.js
 ###sitemix_pr_footer_js
 ##[href$="/footer_ad.css"] + #meerkat-wrap
-
+!tok2.com
 ||tok2.com/app/ad/
 tok2.com###meerkat-wrap
 tok2.com###tok2_footer
 
-!------------yahoo------------!
+!------------vector.co.jp-------------!
+vector.co.jp###adBox
+vector.co.jp###v_50
+pcshop.vector.co.jp###vsSubTableContent
+search.vector.co.jp##section:has(> .overture)
+!header
+search.vector.co.jp##.v_search:nth-of-type(1):style(top: 82px !important;)
+search.vector.co.jp##.v_search:nth-of-type(1) + .pager:style(top: 127px !important;)
+search.vector.co.jp###v_wrapper:style(margin-top: 125px !important; padding-top: 20px !important; background: #fff !important;)
+www.vector.co.jp###wrapper:style(width: 100% !important; background-color: #fff !important;)
+www.vector.co.jp##body[vlink], body[id^="v_"], #wrapper:style(background-image: linear-gradient(#bce3f6 47px, #ffffff 47px 48px, #00000020 48px 49px, #f1f1ef 49px 80px, #00000020 80px 81px, #ffffff 81px 82px, #bce3f6 82px 128px, transparent 128px),linear-gradient(#ffffff 128px 129px, #b0d54a 129px 157px, #ffffff 157px 158px, #00000020 158px,transparent 163px)!important;)
+www.vector.co.jp##:is(body[vlink], body[id^="v_"], #wrapper) #v_search:style(top: 81px !important;)
+www.vector.co.jp##:is(body[vlink], body[id^="v_"], #wrapper) #lib_tab:style(top: 132px !important;)
+www.vector.co.jp##:is(body[vlink], body[id^="v_"], #wrapper) #v_wrapper:style(padding-top: 180px !important;)
+www.vector.co.jp##:-webkit-any(body[vlink], body[id^="v_"], #wrapper) #v_search:style(top: 81px !important;)
+www.vector.co.jp##:-webkit-any(body[vlink], body[id^="v_"], #wrapper) #lib_tab:style(top: 132px !important;)
+www.vector.co.jp##:-webkit-any(body[vlink], body[id^="v_"], #wrapper) #v_wrapper:style(padding-top: 180px !important;)
+www.vector.co.jp###v_header:style(height: unset !important;)
+www.vector.co.jp##td[width="304"][bgcolor="#eeeeee"][align="center"]:style(vertical-align: top !important;)
 
-!お礼コメントが出来なくなる
-/yads.$domain=~okwave.jp
+!-----------weblio.jp-----------!
+||llnwd.net^*/ejje_ads_$script,domain=ejje.weblio.jp
+www.weblio.jp###adPcBnrWrp
+www.weblio.jp##.ads-loader
+www.weblio.jp##.firstDictBnr
+www.weblio.jp##.rectangle-ads-frame-www
+eikaiwa.weblio.jp##.sideButton
+ejje.weblio.jp###footFixBar
+translate.weblio.jp##.sideAd
+translate.weblio.jp##.flex-rectangle-ads-frame
+
+!-----------WordPress-----------!
+/plugins/thirstyaffiliates/*
+##.ad-label
+##.ad-single
+##.ad-space
+##.afc_popup
+##.adPost
+##.adWidget
+##.dfad
+##.quads-location
+!あれなやつ
+##[id^="post-"][class*=post-] [class^="cta-"]
+##[id^="post-"][class*=post-] [class$="-cta"]
+##[id^="post-"][class*=post-] [class*="-cta-"]
+##.cps-post [class^="cta-"]
+##.cps-post [class$="-cta"]
+##.cps-post [class*="-cta-"]
+##[id^="post-"][class*=post-] div[id*="-"][class*="-"][class*="%e"]
+##.cps-post div[id*="-"][class*="-"][class*="%e"]
+##div[class][data-index][style^="float: none; margin:"]
+
+!------------xrea.com------------!
+||imgj.xrea.com^
+||value-domain.com/xrea_header.js
+||ax.xrea.com^
+
+!----------youtubemp3org.me-----!
+||youtubemp3org.me/v4/u21drwj6mp.com/
+savemedia.website##+js(aopr, open)
+
+
+
+
+
+
+
+!------------yahoo------------!
+/yads.
 ||ov.yahoo.co.jp^
 ||yads.yahoo.co.jp^
 ||yeas.yahoo.co.jp^
@@ -1768,8 +2131,18 @@ yahoo.co.jp###brandpanel
 !GYAOとか動画前広告
 ||adserver-apne.tidaltv.com
 
-games.yahoo.co.jp##.jack
-search.yahoo.co.jp##.ss
+auctions.yahoo.co.jp##.ss
+chiebukuro.yahoo.co.jp##.lstAd
+chiebukuro.yahoo.co.jp##[class^="SearchResults_searchResults__contents__main__"] > .SSContainer
+finance.yahoo.co.jp##div:has(> #mainAdTop)
+finance.yahoo.co.jp##div:has(> [id^=subAd])
+mail.yahoo.co.jp###theAd
+mail.yahoo.co.jp###shellcontent:style(right: 0 !important;)
+mail.yahoo.co.jp##.panescroll div#shellcontent:style(top: 145px !important;)
+mail.yahoo.co.jp##.panescroll.scrollable #shellcontent:style(top: 28px !important;)
+mail.yahoo.co.jp##.fullpage.withsky #shellcontent:style(top: 56px !important;)
+search.yahoo.co.jp##.Ad
+
 ||analytics.yahoo.co
 ||b90.yahoo.co.jp^
 ||b91.yahoo.co.jp^
@@ -1777,6 +2150,7 @@ search.yahoo.co.jp##.ss
 ||b97.yahoo.co.jp
 ||dcs.yahoo.co.jp^
 ||geo.yahoo.com^
+||logql.yahoo.co.jp^
 ||rd.yahoo.co.jp^
 ||visit.geocities.jp^
 ||ybx.yahoo.co.jp^
@@ -1784,131 +2158,6 @@ search.yahoo.co.jp##.ss
 ||yjtag.jp^
 
 ||yimg.jp/images/listing/tool/yads/yads-iframe.html?
-
-!------------goo------------!
-||adcdn.goo.ne.jp^
-||goo.ne.jp/oshiete/ad_loader.js?
-goo.ne.jp##dl.txtimgl
-blog.goo.ne.jp###mod-global-header-l span
-blog.goo.ne.jp###mod-goo-recommends
-||log000.goo.ne.jp^
-
-!------------楽天------------!
-||afl.rakuten.co.jp^$domain=~afl.rakuten.co.jp
-||dynamic.rakuten.co.jp^
-||ias.rakuten.co.jp^$domain=~event.rakuten.co.jp
-||xml.affiliate.rakuten.co.jp^
-
-||books.rakuten.co.jp/pzd_contents/js/ranking-ad/*
-||infoseek.rakuten.co.jp/content/news/bunner/
-||rakuten.co.jp/com/js/d/$domain=~item.rakuten.co.jp
-
-||js*.infoseek.co.jp^
-||pzd.rakuten.co.jp^
-||rd.rakuten.co.jp^
-||rt.rakuten.co.jp^
-||rakuten.co.jp/common00/omuniture/
-
-||rakuprop.net^$third-party
-
-##form[action*="afl.rakuten.co.jp"]
-plaza.rakuten.co.jp###commonAdsParts
-recipe.rakuten.co.jp##.rightNaviBanner
-recipe.rakuten.co.jp##.subContentsLink
-
-!------------livedoor------------!
-||unthem.com^$third-party
-||gsspcln.jp^
-||coppedex.com^
-||multiquicks.net^
-||blog.livelog.biz/script/js/package/
-
-###meerkat-contents
-	!blog cookie承認バナー
-###gdpr-banner
-||counter2.blog.livedoor.com/c?ro=1&act=rss
-||livedoor.jp/js/c2.js
-||t.blog.livedoor.jp^
-
-
-!------------excite------------!
-||excite.co.jp/jp/ad/
-||excite.co.jp/jp/ox/
-excite.co.jp###footerWall
-excite.co.jp###sideSource.box01
-
-!------------biglobe------------!
-||webryblog.biglobe.ne.jp/affiliate/rakuten/rakuten_sidebar.js
-||webryblog.biglobe.ne.jp/footerlink/footerlink.js
-
-||microad.net^$domain=news.biglobe.ne.jp
-||ad-api-v01.uliza.jp^$domain=news.biglobe.ne.jp
-||news.biglobe.ne.jp/img/bn/$domain=news.biglobe.ne.jp
-
-!------------mapion--------------!
-||mapion.co.jp*/adOverture/
-||mapion.co.jp/f/common/js/MeasureClickAd.js
-||mapion.co.jp*/js/vl1.
-
-!news
-mapion.co.jp##[id$="Banner"]
-
-!map
-mapion.co.jp###WF_ListFooter
-mapion.co.jp###WF_ListHeader
-
-!--------------msn----------------!
-
-||msn.com/c.gif?
-
-msn.com##.ob-widget.ob-two-rows-strip-layout.AR_20 > .ob-widget-section.ob-first
-msn.com###outbrain_widget_2
-msn.com##.morefromproviderrr
-
-!あわせて読みたい
-@@||widgets.outbrain.com/outbrain.js$domain=msn.com
-@@||odb.outbrain.com/utils/get?$domain=msn.com
-@@||images.outbrain.com^$domain=msn.com
-
-!------------2ch pink------------!
-||i2ad.jp^$domain=5ch.net
-
-||thench.net^$domain=bbspink.com
-bbspink.com##[class$="_banner"]
-bbspink.com##[class^="banner_"]
-pinktower.com##div
-
-@@||itest.5ch.net/rect/special_ads.json
-
-!------------ニコニコ動画------------!
-!アンケート
-||enquete.nicovideo.jp/static/
-||nicovideo.jp/api/getad
-||nicovideo.jp/js/lib/ads-
-!ニコ生
-||nimg.jp/relive/playerbanner/
-!13.02.07 動画見れない 2015/05/14 解除
-!@@||ads.nicovideo.jp/assets/js/ads-
-!2015/08/29 ニコニコニュースコメント読み込めない
-@@||ads.nicovideo.jp/assets/js/ads-$domain=news.nicovideo.jp
-! 13.02.10 うんこ
-! 2015/05/14 解除
-!@@||ads.nicovideo.jp/api/OxBannerService/getAllAdvertisements.jsonp?
-!金枠銀枠
-@@||res.nimg.jp/js/ads.js?
-!ニコニ広告全般
-@@||uad.nicovideo.jp^$generichide
-
-nicovideo.jp##.TagkeyArticleBox
-!検索結果一番下
-nicovideo.jp##.contentItemList.channelGuideVideo.column4
-
-live2.nicovideo.jp##[class^="___banner-panel___"]
-
-dic.nicovideo.jp###header > div:last-child
-
-||nimg.jp/scripts/common/tracking/google_analytics.js?
-||flapi.nicovideo.jp/api/logger.php?*
 
 !------------abema-------------!
 ||ad.abema.io^
@@ -1957,9 +2206,10 @@ amazon.co.jp###nav-swmslot
 ##[class^="amastep"]
 ##[name="amazletlink"]
 ##.amazlet-box
-##.amazon-link
 ##.azlink-box
 ##.kaerebalink-box
+
+@@||amazon-adsystem.com/widgets/q?$image,third-party
 
 @@||images-amazon.com^*/beacon/BeaconSprite-$image
 @@||ssl-images-amazon.com^*/beacon/BeaconSprite-$image
@@ -1971,22 +2221,6 @@ amazon.co.jp###nav-swmslot
 @@||images-fe.ssl-images-amazon.com/images/G/09/misc/transparent-pixel._CB192259222_.gif
 @@||images-fe.ssl-images-amazon.com/images/G/09/x-locale/communities/gifting/universal/bkm/
 
-!------------pixiv------------!
-||booth.pm/embed/items/$domain=pixiv.net
-
-!header
-pixiv.net#@#[class$="-ad"]:not(html):not(body)
-pixiv.net###js-mount-point-header:style(min-height:unset!important;)
-
-dic.pixiv.net###amazon-aws-outer
-!検索プレミア
-pixiv.net##.popular-introduction-overlay
-!jama--
-pixiv.net###pauser
-comic.pixiv.net##._dialog_overlay
-novel.pixiv.net##.info.related-books
-
-@@||melonbooks.com/api/pixiv/get_promotion_ads.php?$domain=pixiv.net
 
 
 
@@ -2008,11 +2242,27 @@ novel.pixiv.net##.info.related-books
 ||fc2.com/image/banner/
 ||fc2.com/js/blog/headbar_ad_load.js?
 ||fc2.com/share/image/banner_
-	!動画内画像広告
-||fc2.com/video/adimage/ad01.png
+
+!video.fc2.com
+||fc2.com/video/img/b/
+||fc2.com/static/video/js/plr/tg/
+||fc2.com/video/*/banner/
+video.fc2.com###pjx-search [href="/a/promo/samples"]
+video.fc2.com##[class^="c-ad"]
+video.fc2.com##.ad_panelAR
+video.fc2.com##.banner
+video.fc2.com##.clmn-side > div[id]
+video.fc2.com##.promotion
+video.fc2.com##.l-ctnt_ls--flex_side_sec
+video.fc2.com##.l-ctnt_ls:style(margin-top: 16px !important;)
+video.fc2.com##.sectionCrd + .sectionCrd
+
 ||vip.chps-api.fc2.com/apis/footer/
 ||video.fc2.com/a/pagead/
 admin.blog.fc2.com##.adimn_pr_txt
+admin.blog.fc2.com###ad_sidebody
+admin.blog.fc2.com###ad_sidebar
+admin.blog.fc2.com##.editor_header_ad
 fc2.com,fc2blog.net##.AdContainer
 ###fc2_bottom_bnr
 fc2.com##table[width="140"][cellspacing="1"][cellpadding="1"][border="0"]
@@ -2022,17 +2272,15 @@ fc2web.com##table[width="100%"] td[valign="baseline"]
 h.fc2.com##body > strong:nth-last-of-type(1)
 h.fc2.com##body > strong:nth-last-of-type(2)
 h.fc2.com##body > strong:nth-last-of-type(3)
-video.fc2.com##.recommend_v2
-video.fc2.com##.side_banner
-video.fc2.com###control_f02_content > .clearfix:first-child
-video.fc2.com###side_menu >.side_menu_block:not(:nth-last-of-type(2)):not(:last-child)
 ||analyzer*.fc2.com/analyzercook.js?
 ||analyzer*.fc2.com^*/ana/
 ||cnt.fc2web.com^
 ||fc2.com/ana/
 ||media.fc2.com^
+||media5.fc2.com^
 ||search.fc2.com/fc2se.js
 
+admin.blog.fc2.com#@##ads
 !アルバムメーカー
 @@||vip.chps-api.fc2.com/apis/imageViewer/access?
 
@@ -2042,13 +2290,13 @@ video.fc2.com###side_menu >.side_menu_block:not(:nth-last-of-type(2)):not(:last-
 ||ameba.jp/ameblo/pc/js/bigfooter-
 ||ameba.jp/analytics/
 ||ameba.jp/blog/xml/mk_data/official/
-ameblo.jp##a[alt0="BlogAffiliate"]
 
-!------------nikkei------------!
-||nikkei.com/fh/showad_
-||nikkei.jp^*/initDS.min.js
-||nikkei.jp^*/SC/
-||nikkei.jp^*/f1h_text1.js
+||amebaowndme.com^*/pureAds|
+
+ameblo.jp##.subAdBannerArea
+ameblo.jp##.skin-entryAd
+ameblo.jp##[alt0="BlogAffiliate"]
+ameblo.jp###subAInner:style(position: static !important; margin-top: auto !important;)
 
 !------------nikkeibp------------!
 ||bizad.nikkeibp.co.jp^
@@ -2059,40 +2307,40 @@ ameblo.jp##a[alt0="BlogAffiliate"]
 
 
 !------------youtube------------!
--pagead-id.
 ||google.co.jp/pagead/
 ||youtube.com^*=adunit&
 ||youtube.com/get_midroll_
 
-||youtube.com^*/log_event?
-||youtube.com^*/log_interaction?
-||youtube.com/player_204?
+||youtube.com/api/stats/atr
+||youtube.com/api/stats/delayplay?
+||youtube.com/api/stats/qoe?
 ||youtube.com/ptracking?
-||s.youtube.com^
-youtube.com##.pyv-afc-ads-inner
+youtube.com###masthead-ad
+youtube.com##ytd-display-ad-renderer:upward(2)
+youtube.com##ytd-promoted-sparkles-web-renderer
+youtube.com##ytd-promoted-sparkles-text-search-renderer
+youtube.com##ytd-video-masthead-ad-advertiser-info-renderer
+youtube.com##.ytd-carousel-ad-renderer
+youtube.com##.ytd-search-pyv-renderer
+youtube.com,youtube-nocookie.com##+js(set, ytInitialPlayerResponse.adPlacements, undefined)
+youtube.com,youtube-nocookie.com##+js(set, playerResponse.adPlacements, undefined)
+youtube.com,youtube-nocookie.com##+js(json-prune, [].playerResponse.adPlacements [].playerResponse.playerAds playerResponse.adPlacements playerResponse.playerAds adPlacements playerAds)
 
-!再生履歴
-@@||s.youtube.com/api/stats/playback?
+!#if adguard
+youtube.com,youtube-nocookie.com#@#+js(json-prune, [].playerResponse.adPlacements [].playerResponse.playerAds playerResponse.adPlacements playerResponse.playerAds adPlacements playerAds)
+youtube-nocookie.com,youtube.com#%#//scriptlet('json-prune', '0.playerResponse.adPlacements 0.playerResponse.playerAds playerResponse.adPlacements playerResponse.playerAds adPlacements playerAds')
+!#endif
 
-!------------dailymotion------------!
+!g------------dailymotion------------!
 ||dailymotion.com*/masscast/
 ||dailymotion.com/logger/
 
-!------------pandora---------------!
+!g------------pandora---------------!
 ||pandora.tv/_adv_img/
 
 ||prism.pandora.tv^
 ||pandora.tv/viewChk2?
 channel.pandora.tv##.pm_wrap
-
-!------------dtiblog------------!
-||dtiserv.com^$third-party
-||dtiserv2.com^$third-party
-||dtiblog.com/pr_ad/
-||dtiblog.com*/blog_ppv/
-||dtiblog.com*/kokuchi/
-||analyzer*.dtiblog.com^
-||dtiblog.com/hist_count.php
 
 !------------sinobi------------!
 !3ヶ月以上放置
@@ -2114,40 +2362,18 @@ channel.pandora.tv##.pm_wrap
 |http://ct2.*.com/sc/
 ||bar1.shinobi.jp^
 ||omt.shinobi.jp^
+||rcm.shinobi.jp^
 ||analysis.shinobi.jp/ninja_ar/
 ||ba1.shinobi.jp^
+||v2st.shinobi.jp^
 ||vis1.shinobi.jp^
 ||vis1.shinobi.jp/js/
 ||vis1.shinobi.jp/jsr/
 
-!------------ero-video.net------------!
-|http://$third-party,domain=ero-video.net
-|https://$third-party,domain=ero-video.net
-||ero-video.net/advert/*
-ero-video.net##^script:has-text(showPopUpBanner)
-
-!------------minnano-av.com------------!
-!----------- minnano-anime.com/
-!------------minnano-camera.com
-
-||minnano-av.com/agent/js/
-||minnano-*.com/top_center_bn/
-||minnnano-fuzoku.com/av/detailspage/
-||minnano-shopping.com^$third-party
-||queen-casino.info/affi/
-
-||minnano-av.com/p/anime_bn634.png
-||minnano-av.com/p/minanno_fzk.png
-||minnano-av.com/p/my_guide_bn634.png
-
-minnano-av.com##.leftbottom_bn
-minnano-av.com##.txtthumb
-minnano-av.com##.type-fuzoku
-
-!------------mediafire.com------------
+!g------------mediafire.com------------
 ||mediafire.com^$subdocument
-||4dsply.com^$domain=mediafire.com
-||razwrite.com^$domain=mediafire.com
+mediafire.com##+js(aopw, UAParser)
+mediafire.com##+js(aeld, click, ClickHandler)
 
 !------さらに検索する を消す
 /ad_plugin.js
@@ -2167,14 +2393,24 @@ minnano-av.com##.type-fuzoku
 ||bipblog.com/aa/ABtest/
 bipblog.com###TopAmazon
 bipblog.com###BottomAmazon
+bipblog.com##.amachazl-box
 
 !fig速
 ||figsoku.net/rank/load.php?
-figsoku.net##.ama > .ssm:last-child
+figsoku.net###recommend
+figsoku.net##.ama:nth-of-type(1)
 figsoku.net##.gad
+figsoku.net##.pluginWrap:has([rel="noopener noreferrer"])
+figsoku.net##.shop
+figsoku.net##.wama
+
+!ライフハック
+lifehack2ch.livedoor.biz##.elsebody
+lifehack2ch.livedoor.biz##.yahoo-ad1b
 
 !α波
 ||blogmaterial.nicoblomaga.jp/material/279/SP300x250-$script,domain=alfalfalfa.com
+alfalfalfa.com##[href^="https://www.amazon.co.jp"]
 
 !妹 http://vipsister23.com/
 ||vipsister23.com/randamad
@@ -2191,27 +2427,35 @@ kanasoku.info##.cent_top
 !金時 http://blog.livedoor.jp/goldennews/
 blog.livedoor.jp##[src="http://blog.livedoor.jp/goldennews/settings/ad.js"] + script + #header + #wrapper > #main-column > .kiziue > a[href*="amazon.co.jp"]
 
-!ニュー速日P
-blog.livedoor.jp##a[href*="dmm.co.jp"][href*="/a2aaaeaaiiia-001"]
-
 !ハター報
-||itoman.doorblog.jp^
 ||blog.livedoor.jp/hamusoku*/amazon
 hamusoku.com##.amazon
 
-!はちまき
-esuteru.com##a[href^="http://www.amazon.co.jp"]
+!はちまき ota
+blog.esuteru.com,otakomu.jp###more > blockquote:last-of-type
+blog.esuteru.com,otakomu.jp###more > center:last-of-type
+blog.esuteru.com,otakomu.jp##.siteRanking-main:style(margin-left: 0 !important;)
 
 !働くモノ http://workingnews.blog117.fc2.com/
 ||fc2.com/w/o/r/workingnews/meerkat_side_double_js2.js
 workingnews.blog117.fc2.com##.amatable_wrap
+workingnews.blog117.fc2.com##.logbox > .boxright
 workingnews.blog117.fc2.com##tr[align="left"] > td[align="left"]
 
 !キニ速
 ||blog.livedoor.jp/kinisoku/$subdocument
 
-!　？？？？  http://beelzeboulxxx.com/
-||blog.livelog.biz/script/js/maob_sp.js
+!マジキチ
+||majikichi.com/js/dlsite_widget.js
+||majikichi.com/js/rad_head_
+majikichi.com###left_menu
+majikichi.com##^#left_menu
+
+!やらおn
+yaraon-blog.com##[id^="mytextwidget-2"]:not(#mytextwidget-2),[id^="mytextwidget-3"],#mytextwidget-5
+
+!はれぞ http://blog.livedoor.jp/darkm/
+blog.livedoor.jp##[src="http://blog.livedoor.jp/darkm/settings/ad.js"] + SCRIPT + DIV + .container #article-over
 
 /js/cm_anpop.js
 /js/cm_rank_widget.js
@@ -2220,95 +2464,188 @@ workingnews.blog117.fc2.com##tr[align="left"] > td[align="left"]
 	! http://blog.livelog.biz/script/js/hrz_sp01.js
 	! http://blog.livelog.biz/script/js/hrz_sp02.js
 	! http://blog.livelog.biz/script/js/hrz_sp03.js
-||blog.livelog.biz/script/js/hrz_sp
-blog.livedoor.jp##[src="http://blog.livedoor.jp/darkm/settings/ad.js"] + SCRIPT + DIV + .container #article-over
+!　？？？？  http://beelzeboulxxx.com/
+	! ||blog.livelog.biz/script/js/maob_sp.js
+||blog.livelog.biz^
+
+
+
+
+
+!g-----pornhubnetwork
+
+!共通
+/ht.js?site_
+||doublepimp.com^$third-party
+||etahub.com^$third-party
+||phncdn.com/stattracker-
+###pb_block
+
+!pornhub
+||phncdn.com/www-static/js/ph-tracking.js?
+||phncdn.com/www-static/js/htmlPauseRoll/
+pornhub.com###hd-rightColVideoPage > .clearfix:first-child
+pornhub.com##.removeAdsStyle
+pornhub.com##.sniperModeEngaged
+pornhub.com##.video-wrapper > #player + [class]
+pornhub.com##+js(nowoif)
+pornhub.com##+js(window.open-defuser)
+
+!redtube
+redtube.com###content_container > .show_page_modals + div
+redtube.com###video_right_col
+redtube.com,redtube.net##+js(aopr, _goat)
+redtube.*##+js(nowoif)
+
+!xtube.com
+||3gporn.biz^$third-party
+xtube.com##.col-xs-24.col-xl-8 > div:first-child
+xtube.com##.banner
+xtube.com##.underPlayerBanner
+
+!youporn.com
+youporn.com##.ad-bottom-text
+youporn.com##.ad-remove
+youporn.com##+js(aopr, _goat)
+youporn.com##+js(aopr, zone_2547)
+youporn.com##+js(nostif, jQuery)
+youporn.com##+js(nowoif)
+
+!tube8.com
+tube8.*##+js(aopw, IS_ADBLOCK)
+tube8.*##+js(nowoif)
+
+!-----TXXX Network
+txxx.*##.header-blocked-ad
+txxx.*##+js(aeld, click, pop.beforeOpen)
+txxx.*##+js(aopr, localStorage)
+txxx.*##+js(no-setTimeout-if, t()?n())
+||txxx.*^$csp=script-src  'self' 'unsafe-eval' 'unsafe-inline' blob:
+
+!-----------xhamster
+|https://$subdocument,domain=xhamster.com
+||xhamster.com/cnt.php?
+||xhcdn.com/js/m.js
+
+!埋め込み動画
+||static-ec.xhcdn.com/id2/swf/*
+||xhcdn.com^*/ads_
+
+xhamster.com##.adVideo
+xhamster.com##.sponsorBottom
+xhamster.com##.avdo.fr
+xhamster.com##^script:has-text(dataPopUnder)
+
+!-----------xvideos.com
+||xvideos.com/in.php?
+!popup
+||www.xvideos.com/video$xmlhttprequest
+!download
+@@||xvideos.com/video-download/
+!コメント見る用
+@@||www.xvideos.com/video-get-comments/
+!外部プレイヤー用
+||flashservice.xvideos.com/embedframe/$xmlhttprequest
+xvideos.com###video-ad
+xvideos.com###video-sponsor-links
+xvideos.com##.sponsor_popup
+xvideos.com##.sponsor-popup
+xvideos.com##^script:has-text(checkVideoAds)
+
+!-----------avgle.com
+avgle.com##img[src*=".php"]
+avgle.com###player_3x2_close:style(font-size: 250% !important;)
+avgle.com##+js(abort-on-property-read.js, AaDetector)
+avgle.com##+js(abort-on-property-read.js, ExoLoader.serve)
+avgle.com##+js(nowebrtc.js)
+avgle.com##+js(set-constant.js, showBlockIf, noopFunc)
+
+
+!-----------jav系
+!気が向いたらやる
+
+!---------ashemaletube.com
+||ashemaletube.com/ast/b/
+ashemaletube.com##.ads-block-rightside
+ashemaletube.com##.video-end-overlay
+ashemaletube.com##+js(aopr, open)
+
+!------------danbooru系
+!sankaku channel
+||otaserve.net^$domain=sankakucomplex.com
+sankakucomplex.com##+js(popads-dummy.js)
+sankakucomplex.com###post-content:style(padding-top: 0px !important;)
+
+!gelbooru
+	!antiadblock
+@@||gelbooru.com/ads.js
+
 
 !--------ホワイトリスト--------!
-	!動画シーク
-@@||2mdn.net/instream/html5/ima3.js$domain=tver.jp
+@@||imasdk.googleapis.com/js/core/bridge*.html$subdocument,domain=~spotify.com
+||pubads.g.doubleclick.net/gampad/ads$xhr,redirect=nooptext,domain=imasdk.googleapis.com
+||googletagmanager.com/gtm.js$script,redirect=noop.js,domain=tv-asahi.co.jp
+!tver 芋
+@@||doubleclick.net/gampad/ads?$xmlhttprequest,domain=tver.jp|video.tv-tokyo.co.jp
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=tver.jp|tbs.co.jp
+
+||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$script,redirect=noopjs,domain=f.tabtter.jp
+
+	!トップバナー
+@@||accesstrade.net/m/m_img/$image,domain=mamastar.jp
 	!動画未練
 @@||ad.afreecatv.com/crossdomain.xml$domain=play.afreeca.com
-	!動画見れない
-	!http://www.tbs.co.jp/muryou-douga/
-@@||ad.auditude.com/adserver/$xmlhttprequest,domain=tver.jp|www.tbs.co.jp
 	!記事崩れ ×ボタン
 @@||ad.impress.co.jp/topics/css/$stylesheet
 @@||ad-link.jp*/index.php?
 	!動画見れない
 @@||aka-cdn.adtechus.com/dt/common/DAC.js$script,domain=www.gorin.jp
-	!動画見れ
-@@||asianclub.tv^$generichide
-@@||bc.geocities.yahoo.co.jp/js/bbs/
+	!全部
+@@||asahi.com/ads/orix-senryu/$css,image,script,domain=asahi.com
+	!動画プレイヤー
+@@||asahicom.jp/ad/js/video/ytpfp.js$script,domain=asahi.com
 	!できない
 @@||cdnst.net/javascript/amazon.js$domain=speedtest.net
 	!商品タブの切替が出来ない
 @@||cs.nakanohito.jp^$domain=kenko-tokina.co.jp
-@@||dlsite.com/img/
-@@||dmm.co.jp/mono/movie/adult/$image
-	!動画見れない
-@@||doubleclick.net/gampad/ads?$xmlhttprequest,domain=tver.jp|video.tv-tokyo.co.jp
 	!検索結果
 @@||ec.sofmap.tyrellsys.com^$domain=used.sofmap.com
 @@||fwmrm.net^*/AdManager.swf?
-	!多い
-@@||google.com^$generichide
-@@||google.co.jp^$generichide
-	!検索結果動画部分
-	!google.co.jp,google.com#@#[class$="Ad"]:not(html):not(body)
-	!通知設定辺り
-	!calendar.google.com#@#[class$="Ad"]:not(html):not(body)
-	!ヘッダー 検索バー
-	!news.google.com#@#[class$="Ad"]:not(html):not(body)
-	!メール一覧
-	!inbox.google.com#@#.ad
-	!新規作成ボックスが消える
-	!mail.google.com#@#.AD
-	!本文
-	!mail.google.com#@#.ads
-	!カラーパレッド
-	!mail.google.com#@#[class$="Ad"]:not(html):not(body)
-	!投稿欄
-	!plus.google.com#@#[class$="Ad"]:not(html):not(body)
+	!画像
+@@||googletagmanager.com/gtm.js?$script,domain=rocketnews24.com
 	!カード画像
 @@||hearthstone.exp.jp/ads/*/*.png$domain=hs-exp.jp
 @@||hs-exp.jp/ads/*/*.png$domain=hs-exp.jp
-@@||image.www.rakuten.co.jp/com/js/d/
 	!画像とか
 @@||images-na.ssl-images-amazon.com^$domain=imdb.com
 @@||media-amazon.com^$domain=imdb.com
-	!動画
-@@||javpm.com^$generichide
-@@||jsgoal.jp/_parts/googlead.html?
+	!ゲームできない
+@@||imasdk.googleapis.com^$domain=games.wkb.jp
 	!skip ad ボタン
 @@||linkbucks.com/tmpl/mint/img/int_skip_ad
 @@||linkbucks.com/scripts/intermissionLink.
-	! あちこち 面倒だから全部許可 例：スケジュール
-	! https://www.mlb.com/rangers/schedule/
-@@||mlb.com^$generichide
+	!ランキングは消さないでおこう
+@@||moeeki.net/cgi-bin/accessmoe/access.js$domain=moeeki.net
 	! 動画見れない
 @@||analytics.edgekey.net^$script,domain=www3.nhk.or.jp
 @@||nhkonline.hb.omtrdc.net/settings/*-adobeorg.xml?$domain=www3.nhk.or.jp
-	!検索関係
-@@||ntv.co.jp/ad-navi/ga/$domain=ntv.co.jp
-	@@||google-analytics.com/ga.js$domain=ntv.co.jp
-	@@||cxense.com^$domain=ntv.co.jp
-	!全般
-@@||nytimes.com^$generichide
 	! 右側の勝率などの欄が非表示
 @@||opgg-static.akamaized.net/js3/tracker.js?*$domain=op.gg
+	! 全部
+@@||picrew.me/player/api/ads?$xmlhttprequest,domain=picrew.me
 	!ポイント貯めるサイト
 @@||pointi.jp^$generichide
 @@||pointservice.com^$generichide
-	!動画見れ
-@@||popads.net/pop.js$domain=jav4.me
 @@||rd.yahoo.co.jp/jpr_sports/sumo_pickup/$image,domain=sports.yahoo.co.jp
+	! ||solty.biz^$third-party
+@@||rss.solty.biz/
 	!申し込みランキング
 @@||rtoaster.jp/Rtoaster.js$domain=3ple.jp
 @@||rt.rtoaster.jp^$domain=3ple.jp
-	!動画見れない
-@@||share-videos.se^$generichide
 	!TOP 総合ランキング
 @@||smp.sankei.co.jp/js/analytics/skd.Analysis.js
+	!サムネイルが表示されない
+@@||static.tacdn.com/components/dist/@ta/tracking.$script,domain=www.tripadvisor.jp
 	!ロックされたときとか
 @@||twitter.com/account/access?
 	!動画見れない
@@ -2325,176 +2662,84 @@ blog.livedoor.jp##[src="http://blog.livedoor.jp/darkm/settings/ad.js"] + SCRIPT 
 @@||hydra-media.cursecdn.com/minecraft-ja.gamepedia.com/*/Beacon$image,domain=minecraft-ja.gamepedia.com
 @@||atwikiimg.com/www26.atwiki.jp/minecraft/*/beacon.png$image,domain=www26.atwiki.jp
 
-	!top番組一覧
-abema.tv#@#[class$="Ad"]:not(html):not(body)
-	!http://www.ad-toshiba.jp/ad/media/122
-ad-toshiba.jp#@#[class^="ad-"]:not(html):not(body)
-ad-toshiba.jp#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
-	! adf.ly SKIPADが見えない
-adf.ly#@#[id*="_ad_"]:not(html):not(body)
-	! fc2ブログ管理画面 > 画像高速表示の設定
-admin.blog.fc2.com#@##ads
-	! 記事本文
-allabout.co.jp#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
-
-amazon.co.jp#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
-	!https://appget.com/c/ clear:both
-appget.com#@#[class$="_ad"]:not(html):not(body):not(.p_no_ad)
 	!body直下
 appmk2.net#@#.advertisement
-	!動画見れない
-ashemaletube.com#@#[class$="-ads"]:not(html):not(body)
-
-bookmeter.com#@#.sidebar a[href*="amazon.co.jp"]
-	!プロフィール辺り
-cam4.com#@#[class$="-ads"]:not(html):not(body)
-	!top全部
-cinematoday.jp#@#[class$="-ad"]:not(html):not(body)
+bookmeter.com#@#.sidebar a[href*="amazon.co.jp"], .sidebar a[href*="amzn.to"]
+	!header
+number.bunshun.jp##.global-container:style(margin-top: 53px !important;)
 	!Amazon誘導ページ 紙で読む
-comicride.jp#@##sub a[href*="amazon.co.jp"]
+comicride.jp#@##sub a[href*="amazon.co.jp"], #sub a[href*="amzn.to"]
 	!サイド 広告だから消しても良い気もする
-cookpad.com#@##ad
-cookpad.com#@#[id^="ad_"]:not(html):not(body):not(#ad_table)
-cookpad.com#@#[id*="_ad_"]:not(html):not(body)
-	!top崩れる
-eiga.com#@#[id$="_ad"]:not(html):not(body)
-	!検索結果
-etymonline.com#@#[class$="Ad"]:not(html):not(body)
-	!動画消える NGCだけ？ https://freshlive.tv/ngc/156675
-freshlive.tv#@#[class$="Ad"]:not(html):not(body)
-	!画像消え https://gyazo.com/c6dbfd4f056d5bfd8ed1db25c1e66f4d
-gyazo.com#@#[class$="-ad"]:not(html):not(body)
+cookpad.com#@#.ad:not([class*="widget_"])
+	!アドベンチャー https://github.com/tofukko/filter/issues/9
+digiket.com#@#.adv
+	!右
+eparet.net#@#.ad:not([class*="widget_"])
+	!REALTIME
+fashionsnap.com#@#.adv
+	!anti adblock
+games.wkb.jp##+js(set, gWkbAdVert, true)
+games.wkb.jp##+js(set, noblock, true)
+@@||imasdk.googleapis.com/js/sdkloader/ima3.js$script,domain=games.wkb.jp
+	!https://www.kadokawa.co.jp/product/322003000737/
+www.kadokawa.co.jp#@#.sidebar a[href*="amazon.co.jp"], .sidebar a[href*="amzn.to"]
+www.kadokawa.co.jp#@#a[href*="px.a8.net/svt/ejp?"]
 	!左側
-koepota.jp#@#[id^="ad_"]:not(html):not(body):not(#ad_table)
+kemochan.com#@#.ad:not([class*="widget_"])
 	! 気象警報・注意報（表形式）が消える
 jma.go.jp#@#.adv
-	! 検索結果
-hentai-only.com#@#[id$="-ads"]:not(html):not(body)
 	!タグ編集
-hi-na.info#@#.ad
-hi-na.info#@#[id$="-ad"]:not(html):not(body)
+hi-na.info#@#.ad:not([class*="widget_"])
 	!記事本文
-houdoukyoku.jp#@#.ad
-houdoukyoku.jp#@#[class^="ad-"]:not(html):not(body)
+houdoukyoku.jp#@#.ad:not([class*="widget_"])
 	!カード画像
 hs-exp.jp#@#.adsbygoogle
 	! http://www.htb.co.jp/onigiri/index.html
 htb.co.jp#@##advertisement
-	!記事右側
-huffingtonpost.jp#@#[class^="ad_"]:not(html):not(body)
-	!inoreaderエントリ記事右上の日付表示が消える
-inoreader.com#@#[id^="ad_"]:not(html):not(body):not(#ad_table)
-	!検索結果 URL
-ixquick.com#@#[class^="ads_"]:not(html):not(body)
+	! 
+magcomi.com#@#.adv
 	!本文
-jp.wsj.com#@#[id$="_ads"]:not(html):not(body)
-	!実行ボタン
-lab.kiki-verb.com#@#[id^="ads_"]:not(html):not(body)
-	!top body直下
-linguee.jp#@#[class^="ad_"]:not(html):not(body)
-linguee.jp#@#[class*=" ad_"]:not(html):not(body):not(.ad_distance)
+mail.google.com#@#.ads
 	!住所検索 > 住所
-mapion.co.jp#@#.ad
-	!カラーコードが消える
-materialui.co#@#[class*="_ad_"]:not(html):not(body)
-fluentcolors.com#@#[class*="_ad_"]:not(html):not(body)
-	!全部
-mega.nz#@#[class$="-ads"]:not(html):not(body)
-	!top 全部
-miyalabo.jp#@#[id$="-ad"]:not(html):not(body)
-	!本文
-mondotv.jp#@#[class$="_ad"]:not(html):not(body):not(.p_no_ad)
-	!ずれる
-mondotv.jp#@#[class*="_ad_"]:not(html):not(body)
-	!top 他？
-moneyforward.com#@#[class$="-ad"]:not(html):not(body)
-	! my.gamecity.ne.jp ログイン後アバター部分が消える
-my.gamecity.ne.jp#@#[id$="_ad"]:not(html):not(body)
-	!全消し
-nationalgeographic.com#@#[class^="ad-"]:not(html):not(body)
-	!GINZA コメント欄が消える
-www.nicovideo.jp#@#[class$="_ads"]:not(html):not(body)
+mapion.co.jp#@#.ad:not([class*="widget_"])
+	!トップバナー
+mamastar.jp#@#a[href*="http://ad."]
+	!ダウンロードボタン
+mediafire.com#@#.ads
+	!追加日 https://github.com/tofukko/filter/issues/5
+mega.nz#@#.ad:not([class*="widget_"])
 	!検索 ランキングの「宣伝」部分が消える
 www.nicovideo.jp#@#.ads
-	!ニコニコ広告部分
-live.nicovideo.jp,live2.nicovideo.jp#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
-live2.nicovideo.jp#@#[id*="-ad-"]:not(html):not(body)
-	!検索結果
-live.nicovideo.jp#@#[id$="-ad"]:not(html):not(body)
-	!タグ登録できない
-nijie.info,horne.red#@#[id$="-ad"]:not(html):not(body)
-	! 動画見れない
-openload.co#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
-openload.co#@#[class$="-ad"]:not(html):not(body)
-	!http://optifine.net/downloads ミラー先が消える
-optifine.net#@#[class$="Ads"]:not(html):not(body)
-	! http://www.paw.hi-ho.ne.jp/milbesos/apldl.shtml
-paw.hi-ho.ne.jp#@#[class^="ad_"]:not(html):not(body)
+	!header辺り
+no-ichigo.jp###rightmenu:style(margin-top: 41px !important;)
+	!右
+okwave.jp#@#.ad_area
+	!記事
+server-setting.info#@#.adsbygoogle
+	!記事
+saitama-np.co.jp#@#div[id^="div-gpt-ad"]
 	!本文
-pcgamingwiki.com#@#[class$="-ads"]:not(html):not(body)
-	!閲覧数あたり
-www.pixiv.net#@#[class$="Ad"]:not(html):not(body)
-	!右側サイドバー全部
-qanda.rakuten.ne.jp#@#[id*="_ad_"]:not(html):not(body)
-	!エントリーパッケージ云々
-	!https://mobile.rakuten.co.jp/select/?l-id=top_carousel_pc_select
-mobile.rakuten.co.jp#@#a[href*="ac.ebis.ne.jp/tr_set.php?"]
-	!記事本文
-rollingstonejapan.com#@#[class$="-ad"]:not(html):not(body)
-	!一部画像が消える
-sai-zen-sen.jp#@#[class*="-ad "]:not(html):not(body)
-sai-zen-sen.jp#@#[class$="-ad"]:not(html):not(body)
-	!記事内画像が消える
-sankei.com#@#[class*="_ad_"]:not(html):not(body)
-	!変なの出る
-sekai-kabuka.com#@#.adsbygoogle
-	!記事見れない
-seikeidenron.jp#@#[class$="Ads"]:not(html):not(body)
-	!検索結果 urlが消える
-startpage.com#@#[class^="ads_"]:not(html):not(body)
-	!検索次へ 
-	!2018/01/31 URL一本化されてた
-touch.pixiv.net#@#[class^="ads-"]:not(html):not(body)
-pixiv.net#@#[class^="ads-"]:not(html):not(body)
-	!本文
-tofukko.com#@#[class$="_ad"]:not(html):not(body):not(.p_no_ad)
-	!ヘッダー辺り
-tv-asahi.co.jp#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
-	!Container内全部
-video.fc2.com#@#[class*="_ad_"]:not(html):not(body)
-video.fc2.com#@#[id^="ad_"]:not(html):not(body):not(#ad_table)
-	!左側
-video.fc2.com#@#[id*="_ad_"]:not(html):not(body)
+tofukko.com#@#.adsbygoogle
 	!右サイドが全部消える
-watch.impress.co.jp#@#.ad
-	!webメール左側が消えるらしい
-webmail.auone-net.jp#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
+watch.impress.co.jp#@#.ad:not([class*="widget_"])
 	!body直下
 wiimk2.net#@#.advertisement
-	! 他のもガッツリ行くけど仕方ない http://www.paw.hi-ho.ne.jp/milbesos/apldl.shtml
-www.paw.hi-ho.ne.jp#@#[class^="ad_"]:not(html):not(body)
-	!top
-youtube.com#@#[class*="-ad-"]:not(html):not(body):not([class*="vjs-"])
-
+	! float
+yakkun.com##.ad + div:style(clear:both)
 
 !-------------------anti adblock-------------------------!
-	!変なの出る
-@@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=sekai-kabuka.com
-@@||pagead2.googlesyndication.com/pagead/js/*/show_ads_impl.js$domain=sekai-kabuka.com
-	!anti adblock
-@@||9ketsuki.info^$generichide
-@@||battlecats-db.com^$generichide
-@@||pagead2.googlesyndication.com/pagead/$domain=9ketsuki.info|battlecats-db.com
-	!antiadblock
-@@||trafficjunky.net/delivery/js/abp/$domain=tube8.com
-	!anti adblock
-@@||yamareco.com^$generichide
+	! https://twitter.com/280blocker/status/1289903534385721344
+/ad-page/dfp.js
+/modal-dist/index.js
 
-atwiki.jp##body > div:not(#fb-root):first-child
-	!503を返す
-k05.biz,z0i.net#@#.adsbygoogle
-	!anti adblock
-thisav.com#@#[id$="_ad"]:not(html):not(body)
+9ketsuki.info##+js(nobab)
+battlecats-db.com##body:style(display: block !important)
+gametter.com##+js(acis, addEventListener, google_ad_client)
+manga1000.com##+js(aopw, $)
+my0nio.seesaa.net#@#.adsbygoogle
+my0nio.seesaa.net#@#.adv
+my0nio.seesaa.net#@#.adsense
+my0nio.seesaa.net#@#.ad:not([class*="widget_"])
 
 !-------------------Mobile用(オマケ)---------------------!
 ||ad-stir.com^$third-party
@@ -2512,19 +2757,14 @@ thisav.com#@#[id$="_ad"]:not(html):not(body)
 ||genieedmp.com^$third-party
 ||i-mobile.co.jp^$third-party
 ||ktai.pw^$third-party
-||lead-ad.jp^$third-party
-||media-rep.com^$third-party
 ||moba8.net^$third-party
 ||nend.net^$third-party
 ||smartad-analytics.info^$third-party
 ||speead.jp^$third-party
-||trax-ad.jp^$third-party
 ||unitedblades.co.jp^$third-party
-||user.in.net^$third-party
 ||yicha.jp^$third-party
 ||z-profit.com^$third-party
 ||zucks.net$third-party
 
 ||amazonaws.com/ad-arata/$domain=fc2.com
-||ad1-click.com^$domain=fc2.com
 ||sp-a.gree.net/g/u.html?
