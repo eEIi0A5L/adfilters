@@ -2,7 +2,7 @@
 ! Title: 豆腐フィルタ
 ! Homepage: http://tofukko.r.ribbon.to/abp.html
 !
-! 最終更新 2020/12/01 22:15
+! 最終更新 2021/01/27 19:05
 !
 !--------通販サイト--------!
 	!amazon.co$third-party,~xmlhttprequest,domain=~amazon.co.jp|~amazon.com|~amazon.co.uk|~amazon.de|~aucfan.com|~book.akahoshitakuya.com|~book.asahi.com|~booklog.jp|~bookmeter.com|~bookvinegar.jp|~google.com|~javari.jp|~kakaku.com|~nicovideo.jp|~comic.pixiv.net|~novel.pixiv.net|~outlook.live.com
@@ -1426,8 +1426,6 @@ idol-blog.com##[id^="post-"] + .box ~ div
 imagis.jp,costype.net##.topadv
 img.favsite.jp##[class$="-lg"]
 img.favsite.jp##[href*="dlsite.com/"]
-inoreader.com##.inno_dialog_modal:not(#login_dialog_wrapper)
-inoreader.com##.inno_dialog_modal_overlay:not(#login_dialog_modal_overlay)
 irasutoya.com##[class^="entryadwrapper"]
 iwate-np.co.jp##.article-list > li:has-text(広告)
 iwate-np.co.jp##.article-list > li:has(> script)
@@ -1569,6 +1567,10 @@ nijie.info,horne.red###footer-banner
 nijie.info,horne.red###header_banner_wrapper
 nijie.info,horne.red##.left_column
 nijie.info##._ad, [href^="/ad.php"]
+! スマホ
+sp.nijie.info###header_ad
+sp.nijie.info###inter_background
+sp.nijie.info###tieup_column
 nikkansports.com##.adBECOME
 nlab.itmedia.co.jp###globalHeader
 novelup.plus##[class^="ad-"]
@@ -1943,15 +1945,6 @@ kissanime.*##+js(set, check_adblock, true)
 ||vlitag.com^$third-party
 ||spolecznosci.net^$third-party
 ||inpagepush.com^$important
-loveha.net,loveheaven.net##.float-ck
-loveha.net,loveheaven.net##.quang-cao
-loveha.net,loveheaven.net##.quang-cao + center
-
-loveha.net,loveheaven.net##br + br + br +h3
-loveha.net,loveheaven.net##.chapter-img + br + br + br + center
-loveha.net,loveheaven.net##.chapter-img + br + br + br + center + br
-loveha.net,loveheaven.net##.chapter-img + br + br + br + center + br + br
-loveha.net,loveheaven.net##.chapter-img + br + br + br + center + br + h3
 
 !--------------msn----------------!
 ://c.*/c.gif?
@@ -2018,6 +2011,8 @@ xtech.nikkei.com###sticky1 > section.l-asideSection:first-child
 xtech.nikkei.com##.bptable + .l-section
 xtech.nikkei.com##.p-article + .l-section
 xtech.nikkei.com##.p-article_ad
+! https://tofukko.blog.fc2.com/blog-entry-405.html#comment830
+@@||vdata.nikkei.com/newsgraphics/coronavirus-japan-chart/js/modules/ga.js?$script,domain=vdata.nikkei.com
 
 !------------rakuten-楽天------------!
 ||adroll.com^$third-party
@@ -2637,6 +2632,8 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 @@||nhkonline.hb.omtrdc.net/settings/*-adobeorg.xml?$domain=www3.nhk.or.jp
 	! 右側の勝率などの欄が非表示
 @@||opgg-static.akamaized.net/js3/tracker.js?*$domain=op.gg
+	! 有料記事
+@@||piano.io^$domain=special.sankei.com
 	! 全部
 @@||picrew.me/player/api/ads?$xmlhttprequest,domain=picrew.me
 	!ポイント貯めるサイト
@@ -2645,6 +2642,8 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 @@||rd.yahoo.co.jp/jpr_sports/sumo_pickup/$image,domain=sports.yahoo.co.jp
 	! ||solty.biz^$third-party
 @@||rss.solty.biz/
+	! 予約するポップアップ
+@@||rtoaster.jp/Rtoaster.js$script,domain=www.melonbooks.co.jp
 	!申し込みランキング
 @@||rtoaster.jp/Rtoaster.js$domain=3ple.jp
 @@||rt.rtoaster.jp^$domain=3ple.jp
@@ -2652,6 +2651,8 @@ sankakucomplex.com###post-content:style(padding-top: 0px !important;)
 @@||smp.sankei.co.jp/js/analytics/skd.Analysis.js
 	!サムネイルが表示されない
 @@||static.tacdn.com/components/dist/@ta/tracking.$script,domain=www.tripadvisor.jp
+	!https://tabelog.com/tokyo/map/ お店のリストと地図が出ない
+@@||tblg.k-img.com/javascripts/modules/rst/analytics.js$script,domain=tabelog.com
 	!ロックされたときとか
 @@||twitter.com/account/access?
 	!動画見れない
@@ -2683,6 +2684,10 @@ digiket.com#@#.adv
 eparet.net#@#.ad:not([class*="widget_"])
 	!REALTIME
 fashionsnap.com#@#.adv
+	!anti adblock
+ff14angler.com##.adsbygoogle:style(height: 0 !important;)
+ff14angler.com#@#.adsbygoogle
+@@||pagead2.googlesyndication.com/pagead/$domain=ff14angler.com
 	!anti adblock
 games.wkb.jp##+js(set, gWkbAdVert, true)
 games.wkb.jp##+js(set, noblock, true)
