@@ -13,4 +13,3 @@
 #wget -N https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/filters.txt
 
 aria2c --allow-overwrite true -i urllist
-mv 280.php 280.txt
